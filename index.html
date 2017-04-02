@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -108,7 +108,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -131,7 +131,7 @@
   <title> Hexo </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -196,7 +196,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -206,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -216,7 +216,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -239,416 +239,6 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/关于弹出层的总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/02/关于弹出层的总结/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-02T20:10:38+08:00">
-                2017-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="关于弹出层的总结"><a href="#关于弹出层的总结" class="headerlink" title="关于弹出层的总结"></a>关于弹出层的总结</h1><p>思路：<br>现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的</p>
-<p>HTML</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;btnlogin&quot;&gt;登录&lt;/button&gt;</div><div class="line">&lt;!--&lt;div id=&quot;mask&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div id=&quot;login&quot;&gt;</div><div class="line">	&lt;div class=&quot;head&quot;&gt;</div><div class="line">		登录账号</div><div class="line">		&lt;div id=&quot;close&quot;&gt;×&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=&quot;contain&quot;&gt;</div><div class="line">		&lt;div class=&quot;user&quot;&gt;</div><div class="line">			用户名：&lt;span&gt;&lt;input type=&quot;text&quot; placeholder=&quot;用户名/手机/邮箱&quot;&gt;&lt;/span&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;password&quot;&gt;密码： &amp;nbsp; &amp;nbsp;&lt;input type=&quot;password&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;submit&quot;&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">--&gt;</div></pre></td></tr></table></figure>
-<p>CSS</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">#btnlogin&#123;</div><div class="line">	position: absolute;</div><div class="line">	right: 10px;</div><div class="line">	top: 10px;</div><div class="line">&#125;</div><div class="line">#mask&#123;</div><div class="line">	background-color: black;</div><div class="line">	opacity: 0.5;//设置透明度</div><div class="line">	width: 100%;</div><div class="line">	z-index: 1000;//设置优先级</div><div class="line">&#125;</div><div class="line">#login&#123;</div><div class="line">	position: fixed;</div><div class="line">	left: 30%;</div><div class="line">	top: 30%;</div><div class="line">	border: 1px solid black;</div><div class="line">	z-index: 1001;</div><div class="line">&#125;</div><div class="line">.head&#123;</div><div class="line">	width: 400px;</div><div class="line">	height: 40px;</div><div class="line">	background-color: #666666;</div><div class="line">	position: relative;</div><div class="line">	text-align: left;</div><div class="line">	line-height: 40px;</div><div class="line">	font-size: 20px;</div><div class="line">	cursor: move;//鼠标放在登录框顶部会变成十字按钮</div><div class="line">&#125;</div><div class="line">.contain&#123;</div><div class="line">	width: 400px;</div><div class="line">	height: 250px;</div><div class="line">	position: relative;</div><div class="line">	background-color: white;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#close&#123;</div><div class="line">	width: 30px;</div><div class="line">	height: 30px;</div><div class="line">	cursor: pointer;</div><div class="line">	position: absolute;</div><div class="line">	right: 5px;</div><div class="line">	top: 5px;</div><div class="line">	text-align: center;</div><div class="line">	line-height: 30px;</div><div class="line">	font-size: 25px;</div><div class="line">&#125;</div><div class="line">.user, .password, .submit&#123;</div><div class="line">	padding-top: 25px;</div><div class="line">	margin-left: 25px;</div><div class="line">	width: 350px;</div><div class="line">	height: 50px;</div><div class="line">&#125;</div><div class="line">.contain input&#123;</div><div class="line">	width: 200px;</div><div class="line">	height: 40px;</div><div class="line">	border: 1px solid black;</div><div class="line">&#125;</div><div class="line">.submit input&#123;</div><div class="line">	background-color: #3F89EC;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>JS</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">window.onload=function()&#123;</div><div class="line">	var obtn = document.getElementById(&quot;btnlogin&quot;);//获取登录按钮</div><div class="line">	obtn.onclick = function()&#123;</div><div class="line">//遮罩层</div><div class="line">	    var height = document.body.scrollHeight;//scrollHeight表示元素的总高度，包括由于溢出而无法展示在网页的不可见部分</div><div class="line">	    var width = document.body.scrollWidth;</div><div class="line">	    var mask = document.createElement(&quot;div&quot;);//创建div</div><div class="line">	    mask.id =&quot;mask&quot;;//给他赋ID为mask</div><div class="line">	    mask.style.height = height+&quot;px&quot;;//给他赋高度与宽度</div><div class="line">	    mask.style.width = width+&quot;px&quot;;</div><div class="line">	    mask.style.backgroundColor=&quot;black&quot;;</div><div class="line">	    document.body.appendChild(mask);//将遮罩层添加到body中</div><div class="line">//登录</div><div class="line">	var login = document.createElement(&quot;div&quot;);//创建登录框</div><div class="line">	login.id = &quot;login&quot;; </div><div class="line">//可视区域</div><div class="line">	var wheight = document.documentElement.clientHeight;</div><div class="line">	var wwidth = document.documentElement.clientWidth;</div><div class="line">	login.innerHTML=&quot;&lt;div class=&apos;head&apos;&gt;登录账号&lt;div id=&apos;close&apos;&gt;×&lt;/div&gt;&lt;/div&gt;&lt;div class=&apos;contain&apos;&gt;&lt;div class=&apos;user&apos;&gt;用户名：&lt;span&gt;&lt;input type=&apos;text&apos; placeholder=&apos;用户名/手机/邮箱&apos;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&apos;password&apos;&gt;密码： &amp;nbsp; &amp;nbsp;&lt;input type=&apos;password&apos;&gt;&lt;/div&gt;&lt;div class=&apos;submit&apos;&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;input type=&apos;submit&apos; value=&apos;登录&apos;&gt;&lt;/div&gt;&lt;/div&gt;&quot;//添加HTML中ID为login的div下的代码</div><div class="line">	document.body.appendChild(login);//将div添加到body中</div><div class="line">//本身</div><div class="line">	var dheight = login.offsetHeight;//获取登录框自己的高度与宽度</div><div class="line">	var dwidth = login.offsetWidth;</div><div class="line">	login.style.left = (wwidth-dwidth)/2+&quot;px&quot;;//使登录框居中</div><div class="line">	login.style.top = (wheight-dheight)/2+&quot;px&quot;;</div><div class="line">//设置关闭功能	</div><div class="line">	var oclose=document.getElementById(&quot;close&quot;);</div><div class="line">	mask.onclick=oclose.onclick=function()&#123;</div><div class="line">		document.body.removeChild(mask);</div><div class="line">		document.body.removeChild(login);</div><div class="line">	&#125;</div><div class="line">	&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<p>做到这一个登录框的基本弹出效果就做的差不多了<br>最后我们给他在增加一个拖拽功能</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">var mouseoffsetx = 0;//偏移</div><div class="line">var mouseoffsety = 0;</div><div class="line">var isdraging = false;//定义一个变量表示是否可以拖拽</div><div class="line">//事件1   计算鼠标相对于登录框左上角的坐标，标记元素为可拖动</div><div class="line">	document.onmousedown = function(e)&#123;</div><div class="line">		mouseoffsetx = e.pageX-login.offsetLeft;//鼠标相对于整个页面的坐标减去登录框相对于左边的距离</div><div class="line">		mouseoffsety = e.pageY-login.offsetTop;</div><div class="line">		isdraging = true;</div><div class="line">//事件2,检测是否标记为移动，是的话更新元素位置到当前位置</div><div class="line">	document.onmousemove = function(e)&#123;</div><div class="line">		var login1 = document.getElementById(&quot;login&quot;);</div><div class="line">		var mousex = e.pageX;</div><div class="line">		var mousey = e.pageY;//当前位置</div><div class="line">		var movex = 0;</div><div class="line">		var movey = 0;</div><div class="line">		if (isdraging===true) &#123;</div><div class="line"></div><div class="line">			movex = mousex - mouseoffsetx;</div><div class="line">			movey = mousey - mouseoffsety;</div><div class="line">//界限，防止登录框拖拽不见</div><div class="line">			var maxX = wwidth - dwidth;</div><div class="line">			var maxY = wheight - dheight;</div><div class="line">			movex=(maxX,Math.max(0,movex));</div><div class="line">			movey=(maxY,Math.max(0,movey));</div><div class="line">			login1.style.left = movex + &quot;px&quot;;</div><div class="line">			login1.style.top = movey + &quot;px&quot;;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">//事件3，鼠标松开显示不可拖拽</div><div class="line">	document.onmouseup=function()&#123;</div><div class="line">		isdraging = false;</div><div class="line">	&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
-<p>至此一个弹出框的基本效果就已经写完了</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/数组/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/02/数组/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-02T20:10:38+08:00">
-                2017-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
-<li>数组的创建</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//法一</div><div class="line">var colors = new Array();</div><div class="line">var colors = new Array(20);//括号中可以填数组要保存的项目数量，这就是创建了length为20的数组</div><div class="line">var colors = new Array(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;);//括号也可以传递数组中应该包含的项</div><div class="line">//法二数组字面量表示法</div><div class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</div></pre></td></tr></table></figure>
-<p>2.元素的访问与修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];</div><div class="line">alert(colors[0]);//访问到了red，数组的访问是以0开始的</div><div class="line">colors[2] = &quot;black&quot;;//将第三项blue修改为了black</div><div class="line">colors[3] = &quot;yellow&quot;;//新增了第四项</div></pre></td></tr></table></figure>
-<p>3.数组的转换方法</p>
-<ul>
-<li>toString()</li>
-</ul>
-<p>每个值的字符串表示拼接成了一个字符串，中间以逗号分隔开</p>
-<ul>
-<li>toLocalString()</li>
-</ul>
-<p>返回值与toString（）方法一样，不同点在于调用每一项的toLocalString()方法</p>
-<ul>
-<li>valueOf</li>
-</ul>
-<p>与toString一样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">var person1 = &#123;</div><div class="line">    toLocalString : function()&#123;</div><div class="line">        return &quot;Nikolaos&quot;;</div><div class="line">    &#125;,</div><div class="line">    toString : function()&#123;</div><div class="line">        return &quot;Nicholas&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var person2 = &#123;</div><div class="line">    toLocalString : function()&#123;</div><div class="line">        return &quot;Grigorios&quot;;</div><div class="line">    &#125;,</div><div class="line">    toString : function()&#123;</div><div class="line">        return &quot;greg&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var people = [person1,person2];</div><div class="line">alert(&quot;person&quot;);//Nicholas,Greg,因为alert要接受字符串参数，他会在后台调用toString（）方法</div><div class="line">alert(people.toString());//Nicholas,Greg</div><div class="line">alert(people.toLocalString());//Nikolaos,Grigorios</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">//补充一个join（）方法，他接受一个参数，这个参数是用作分隔符的字符串</div><div class="line">var colors = [&quot;red&quot;, &quot;green&quot;, &quot;yellow&quot;];</div><div class="line">alert(colors.join(&quot;||&quot;));//red||green||yellow</div></pre></td></tr></table></figure>
-<p>4.元素的添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var colors = new Array();</div><div class="line">var count = colors.push(&quot;red&quot;,&quot;green&quot;);</div><div class="line">alert(count);//2  push()方法接收任意参数，并且把他们逐项添加到数组末尾，注意的是他返回的是数组的长度</div><div class="line">var count2 = colors.unshift(&quot;black&quot;,&quot;blue&quot;);</div><div class="line">alert(count2); //3  colors[0]=black unshift()方法接收任意参数，并且把他们添加到数组前端，注意的是他返回的是数组的长度，而且如果一次添加多个，它的顺序是从右往左添加</div><div class="line"></div><div class="line">splice()方法，向指定位置插入任意数量的项，splice(起始位置，0，&quot;&quot;,&quot;&quot;.....)</div><div class="line">var colors = [&quot;red&quot;, &quot;green&quot;, &quot;brown&quot;];</div><div class="line">var removed = colors.splice(1,0,&quot;yellow&quot;,&quot;orange&quot;);</div><div class="line">alert(colors);//red,yellow,orange,green,yellow</div></pre></td></tr></table></figure>
-<p>5.元素的删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">colors.pop()//从数组末尾移除最后一项，返回的是移除的项</div><div class="line">colors.shift()//移除数组的第一项</div><div class="line">colos.splice(起始位置，项数)//删除从指定位置开始的项数</div></pre></td></tr></table></figure>
-<p>6.元素的合并与截取</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">截取</div><div class="line">colors.slice(起始位置)//获取指定位置到数组末尾的所有项</div><div class="line">colors.slice(起始位置，结束位置)//获取起始位置到结束位置之前的所有数组的项</div><div class="line">注意：要是参数中有负数，则用数组的长度加上该数来确定位置</div><div class="line"></div><div class="line">合并</div><div class="line">var colors = [&quot;red&quot;,&quot;green&quot;];</div><div class="line">var colors2 = colors.contact(&quot;yellow&quot;,[&quot;black&quot;,&quot;brown&quot;]);</div><div class="line">alert(colors2);//red,green,yellow,black,brown</div></pre></td></tr></table></figure>
-<p>7.排序</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">arr.reverse();//反转数组项</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">对数组元素排序</div><div class="line">function compare(value1,value2)&#123;</div><div class="line">			if (value1&lt;value2) &#123;</div><div class="line">				return-1;</div><div class="line">			&#125;else if (value1&gt;value2) &#123;</div><div class="line">				return 1;</div><div class="line">			&#125;else&#123;</div><div class="line">				return 0;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		var values = [5,3,9,0,1];</div><div class="line">		values.sort(compare);</div><div class="line">		alert(values);</div></pre></td></tr></table></figure>
-<p>8.查找元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">indexOf()从数组的开头开始向后查找</div><div class="line">lastIndexOf从数组末尾开始向前查找</div><div class="line">找到返回位置，没找到就返回-1</div><div class="line"></div><div class="line"></div><div class="line">var numbers = [1,2,3,4,5,4,3,2,1]</div><div class="line">alert(numbers.indexOf(4));//3 这是从前向后找</div><div class="line">alert(numbers.lastIndexOf(4));//5 从后向前找</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/基本知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/02/基本知识/" itemprop="url">
-                  Unbenannt
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-02T20:10:38+08:00">
-                2017-04-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p>1.最好的做法把<script>标签放到html文档的最后，</script>标签之前，这样能使浏览器更快的加载页面</p>
-<p>2.JavaScript中，变量和其他语法元素都是区分字母大小写的</p>
-<p>3.不允许变量名中包含空格和标点符号（$除外），允许包含字母，数字，美元符号，下划线，但是第一个字符不允许是数字</p>
-<p>4.对象</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//创建方法</div><div class="line">1.直接创建</div><div class="line">var lennon = Object();</div><div class="line">lennon.name = &quot;john&quot;;</div><div class="line">lennon.year = 25;</div><div class="line">lennon.living = false;</div><div class="line">2.简洁的方法</div><div class="line">var lennon = &#123;</div><div class="line">    name:&quot;john&quot;,</div><div class="line">    year:25,</div><div class="line">    living:false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>5.关于+号</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">拼接字符串</div><div class="line">var message = &quot;i am feeling&quot;+&quot;happy&quot;;</div><div class="line">这种拼接也可以通过变量来赋值</div><div class="line">var mood = &quot;happy&quot;;</div><div class="line">var message = &quot;i am feeling&quot;+mood;</div><div class="line">甚至可以将字符串与数字拼接，但是数值会被自动转换为字符串</div><div class="line">注意：如果字符串与数字拼接，结果是一个更长的字符串；如果拼接两个数值，结果是数值的算术和</div><div class="line">alert(&quot;10&quot;+20)//1020</div><div class="line">alert(10+20)//30</div></pre></td></tr></table></figure>
-<p>6.变量作用域</p>
-<p>全局变量：在脚本的任意位置被引用</p>
-<p>局部变量：只存在声明它的那个函数的内部，不能在函数的外部引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">如果在某个函数中使用了var，那个变量被看做局部变量，只存在于函数的上下文中</div><div class="line">function square(num)&#123;</div><div class="line">    total = num*num;</div><div class="line">    return total;</div><div class="line">&#125;</div><div class="line">var total = 50;</div><div class="line">var number = square(20);</div><div class="line">alert(total);//400</div><div class="line">变式</div><div class="line">function square(num)&#123;</div><div class="line">    var total = num*num;</div><div class="line">    return total;</div><div class="line">&#125;</div><div class="line">var total = 50;</div><div class="line">var number = square(20);</div><div class="line">alert(total);//50</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
     
       
 
@@ -696,9 +286,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-02T19:24:57+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T19:24:57+08:00">
                 2017-04-02
               </time>
             
@@ -824,8 +414,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -886,11 +476,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
