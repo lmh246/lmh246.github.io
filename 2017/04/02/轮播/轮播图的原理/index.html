@@ -1,0 +1,680 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="轮播图的原理一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播html代码
+123456789101112131415161718192021222324&amp;lt;div id=&amp;quot;container&amp;quot;&amp;gt;&amp;lt;div id=&amp;quot;list">
+<meta property="og:type" content="article">
+<meta property="og:title" content="轮播图的原理">
+<meta property="og:url" content="http://yoursite.com/2017/04/02/轮播/轮播图的原理/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="轮播图的原理一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播html代码
+123456789101112131415161718192021222324&amp;lt;div id=&amp;quot;container&amp;quot;&amp;gt;&amp;lt;div id=&amp;quot;list">
+<meta property="og:image" content="http://yoursite.com/轮播.png">
+<meta property="og:updated_time" content="2017-04-02T12:34:12.581Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="轮播图的原理">
+<meta name="twitter:description" content="轮播图的原理一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播html代码
+123456789101112131415161718192021222324&amp;lt;div id=&amp;quot;container&amp;quot;&amp;gt;&amp;lt;div id=&amp;quot;list">
+<meta name="twitter:image" content="http://yoursite.com/轮播.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/02/轮播/轮播图的原理/"/>
+
+
+
+
+
+  <title> 轮播图的原理 | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/轮播/轮播图的原理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                轮播图的原理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T20:33:45+08:00">
+                2017-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="轮播图的原理"><a href="#轮播图的原理" class="headerlink" title="轮播图的原理"></a>轮播图的原理</h1><p>一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播<br><img src="轮播.png" alt="image"><br>html代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;container&quot;&gt;</div><div class="line">&lt;div id=&quot;list&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;a id=&quot;btnleft&gt;&lt;img src=&quot;左.png&quot; class=&quot;left&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a id=&quot;btnright&quot;&gt;&lt;img src=&quot;右.jpg&quot; class=&quot;right&quot;&gt;&lt;/a&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div id=&quot;buttons&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>CSS部分</p>
+<p><strong>注意list的overflow:hidden;只显示窗口的一张图片，把左右两边的都隐藏起来。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    padding: 20px;</div><div class="line">        &#125;</div><div class="line">#container&#123;</div><div class="line">	width: 800px;</div><div class="line">	margin: 0 auto;</div><div class="line">	position: relative;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">#list&#123;</div><div class="line">	width: 4800px;</div><div class="line">	height: 300px;</div><div class="line">	position: absolute;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#list img&#123;</div><div class="line">	width: 800px;</div><div class="line">	height: 300px;</div><div class="line">	float: left;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.right&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	margin-left: 750px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line">.button&#123;</div><div class="line">	width: 120px;</div><div class="line">	height: 80px;</div><div class="line">	margin-top: 450px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.left:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div><div class="line">.right:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>JavaScript部分</p>
+<p><strong>先实现轮播效果</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">var list = document.getElementById(&quot;list&quot;);//获取6张图片的div</div><div class="line">var aimg = list.getElementsByTagName(&quot;a&quot;);//获取6张图片</div><div class="line">var btnleft = document.getElementById(&quot;btnleft&quot;);//获取左边的按钮</div><div class="line">var btnright = document.getElementById(&quot;btnright&quot;);//获取右边的按钮</div><div class="line">var abuttons = document.getElementById(&quot;buttons&quot;).getElementsByTagName(&quot;a&quot;);//获取下方的缩略图</div><div class="line">var inow = 0;</div><div class="line"></div><div class="line">	function move(index)&#123;</div><div class="line">	list.style.left = -index*800 + &quot;px&quot;;</div><div class="line">	if (index &gt;aimg.length-1) &#123;</div><div class="line">		index = 0;</div><div class="line">		inow = index;//这是对于右边的按钮的，防止一直按下去是白屏</div><div class="line">	&#125;</div><div class="line">	if (index&lt; 0) &#123;</div><div class="line">		index = aimg.length-1;//这是对于左边的按钮的，防止一直按下去是白屏</div><div class="line">		inow = index;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">	for (var i = 0; i &lt; abuttons.length; i++) &#123;</div><div class="line">		abuttons[i].index = i;//给每个缩略图一个序号，相当于一个数组</div><div class="line">		abuttons[i].onclick = function()&#123;</div><div class="line">			//list.style.left = -800*this.index + &quot;px&quot;;</div><div class="line">			move(this.index);</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		</div><div class="line">var timer;</div><div class="line">    function play()&#123;</div><div class="line">	    timer = setInterval(function()&#123;</div><div class="line">		btnright.onclick()&#125;, 1500)</div><div class="line">&#125;</div><div class="line">play();</div></pre></td></tr></table></figure>
+<p>这段代码中的move函数，由于不管是轮播还是点击方向键，其本质都是改变div的位置，使它发生位移，从而实现轮播，所以就把它写在了move函数</p>
+<p><strong>通过点击方向键改变图片</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">btnright.onclick = function()&#123;</div><div class="line">		inow++</div><div class="line">		move(inow);</div><div class="line">	&#125;</div><div class="line">	btnleft.onclick = function()&#123;</div><div class="line">		inow--</div><div class="line">		move(inow);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>因为你会发现一直点击下去，会出现白屏，没有图片显示，所以在上面的move函数又增加了一个判断语句，是否图片已经轮播完了，但是我这代码出了问题，点到最后还是会出现一张白屏的，不知道怎么修改。</p>
+<p><strong>最后在增加一个功能，就是鼠标放到图片上时，停止轮播，离开又继续轮播。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//设置鼠标放到图片上时，停止轮播</div><div class="line">var container = document.getElementById(&quot;container&quot;);</div><div class="line">function stop()&#123;</div><div class="line">	clearInterval(timer);</div><div class="line">&#125;</div><div class="line">container.onmouseover = function()&#123;</div><div class="line">	stop();</div><div class="line">&#125;</div><div class="line">container.onmouseout = function()&#123;</div><div class="line">	play();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当然这些JS代码要放在window.onload=function(){}中</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/02/基本知识/" rel="next" title="javascript基本知识">
+                <i class="fa fa-chevron-left"></i> javascript基本知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#轮播图的原理"><span class="nav-number">1.</span> <span class="nav-text">轮播图的原理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

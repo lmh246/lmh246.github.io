@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-02T12:26:44.825Z</updated>
+  <updated>2017-04-02T12:34:12.581Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,166 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>轮播图的原理</title>
+    <link href="http://yoursite.com/2017/04/02/%E8%BD%AE%E6%92%AD/%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2017/04/02/轮播/轮播图的原理/</id>
+    <published>2017-04-02T12:33:45.107Z</published>
+    <updated>2017-04-02T12:34:12.581Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="轮播图的原理"><a href="#轮播图的原理" class="headerlink" title="轮播图的原理"></a>轮播图的原理</h1><p>一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播<br><img src="轮播.png" alt="image"><br>html代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;container&quot;&gt;</div><div class="line">&lt;div id=&quot;list&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;a id=&quot;btnleft&gt;&lt;img src=&quot;左.png&quot; class=&quot;left&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a id=&quot;btnright&quot;&gt;&lt;img src=&quot;右.jpg&quot; class=&quot;right&quot;&gt;&lt;/a&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div id=&quot;buttons&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<p>CSS部分</p>
+<p><strong>注意list的overflow:hidden;只显示窗口的一张图片，把左右两边的都隐藏起来。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    padding: 20px;</div><div class="line">        &#125;</div><div class="line">#container&#123;</div><div class="line">	width: 800px;</div><div class="line">	margin: 0 auto;</div><div class="line">	position: relative;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">#list&#123;</div><div class="line">	width: 4800px;</div><div class="line">	height: 300px;</div><div class="line">	position: absolute;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#list img&#123;</div><div class="line">	width: 800px;</div><div class="line">	height: 300px;</div><div class="line">	float: left;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.right&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	margin-left: 750px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line">.button&#123;</div><div class="line">	width: 120px;</div><div class="line">	height: 80px;</div><div class="line">	margin-top: 450px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.left:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div><div class="line">.right:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>JavaScript部分</p>
+<p><strong>先实现轮播效果</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">var list = document.getElementById(&quot;list&quot;);//获取6张图片的div</div><div class="line">var aimg = list.getElementsByTagName(&quot;a&quot;);//获取6张图片</div><div class="line">var btnleft = document.getElementById(&quot;btnleft&quot;);//获取左边的按钮</div><div class="line">var btnright = document.getElementById(&quot;btnright&quot;);//获取右边的按钮</div><div class="line">var abuttons = document.getElementById(&quot;buttons&quot;).getElementsByTagName(&quot;a&quot;);//获取下方的缩略图</div><div class="line">var inow = 0;</div><div class="line"></div><div class="line">	function move(index)&#123;</div><div class="line">	list.style.left = -index*800 + &quot;px&quot;;</div><div class="line">	if (index &gt;aimg.length-1) &#123;</div><div class="line">		index = 0;</div><div class="line">		inow = index;//这是对于右边的按钮的，防止一直按下去是白屏</div><div class="line">	&#125;</div><div class="line">	if (index&lt; 0) &#123;</div><div class="line">		index = aimg.length-1;//这是对于左边的按钮的，防止一直按下去是白屏</div><div class="line">		inow = index;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">	for (var i = 0; i &lt; abuttons.length; i++) &#123;</div><div class="line">		abuttons[i].index = i;//给每个缩略图一个序号，相当于一个数组</div><div class="line">		abuttons[i].onclick = function()&#123;</div><div class="line">			//list.style.left = -800*this.index + &quot;px&quot;;</div><div class="line">			move(this.index);</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		</div><div class="line">var timer;</div><div class="line">    function play()&#123;</div><div class="line">	    timer = setInterval(function()&#123;</div><div class="line">		btnright.onclick()&#125;, 1500)</div><div class="line">&#125;</div><div class="line">play();</div></pre></td></tr></table></figure>
+<p>这段代码中的move函数，由于不管是轮播还是点击方向键，其本质都是改变div的位置，使它发生位移，从而实现轮播，所以就把它写在了move函数</p>
+<p><strong>通过点击方向键改变图片</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">btnright.onclick = function()&#123;</div><div class="line">		inow++</div><div class="line">		move(inow);</div><div class="line">	&#125;</div><div class="line">	btnleft.onclick = function()&#123;</div><div class="line">		inow--</div><div class="line">		move(inow);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>因为你会发现一直点击下去，会出现白屏，没有图片显示，所以在上面的move函数又增加了一个判断语句，是否图片已经轮播完了，但是我这代码出了问题，点到最后还是会出现一张白屏的，不知道怎么修改。</p>
+<p><strong>最后在增加一个功能，就是鼠标放到图片上时，停止轮播，离开又继续轮播。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">//设置鼠标放到图片上时，停止轮播</div><div class="line">var container = document.getElementById(&quot;container&quot;);</div><div class="line">function stop()&#123;</div><div class="line">	clearInterval(timer);</div><div class="line">&#125;</div><div class="line">container.onmouseover = function()&#123;</div><div class="line">	stop();</div><div class="line">&#125;</div><div class="line">container.onmouseout = function()&#123;</div><div class="line">	play();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>当然这些JS代码要放在window.onload=function(){}中</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;轮播图的原理&quot;&gt;&lt;a href=&quot;#轮播图的原理&quot; class=&quot;headerlink&quot; title=&quot;轮播图的原理&quot;&gt;&lt;/a&gt;轮播图的原理&lt;/h1&gt;&lt;p&gt;一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>javascript基本知识</title>
+    <link href="http://yoursite.com/2017/04/02/%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2017/04/02/基本知识/</id>
+    <published>2017-04-02T12:31:23.139Z</published>
+    <updated>2017-04-02T12:32:13.948Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p>1.最好的做法把<script>标签放到html文档的最后，</script>标签之前，这样能使浏览器更快的加载页面</p>
+<p>2.JavaScript中，变量和其他语法元素都是区分字母大小写的</p>
+<p>3.不允许变量名中包含空格和标点符号（$除外），允许包含字母，数字，美元符号，下划线，但是第一个字符不允许是数字</p>
+<p>4.对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//创建方法</div><div class="line">1.直接创建</div><div class="line">var lennon = Object();</div><div class="line">lennon.name = &quot;john&quot;;</div><div class="line">lennon.year = 25;</div><div class="line">lennon.living = false;</div><div class="line">2.简洁的方法</div><div class="line">var lennon = &#123;</div><div class="line">    name:&quot;john&quot;,</div><div class="line">    year:25,</div><div class="line">    living:false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>5.关于+号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">拼接字符串</div><div class="line">var message = &quot;i am feeling&quot;+&quot;happy&quot;;</div><div class="line">这种拼接也可以通过变量来赋值</div><div class="line">var mood = &quot;happy&quot;;</div><div class="line">var message = &quot;i am feeling&quot;+mood;</div><div class="line">甚至可以将字符串与数字拼接，但是数值会被自动转换为字符串</div><div class="line">注意：如果字符串与数字拼接，结果是一个更长的字符串；如果拼接两个数值，结果是数值的算术和</div><div class="line">alert(&quot;10&quot;+20)//1020</div><div class="line">alert(10+20)//30</div></pre></td></tr></table></figure>
+<p>6.变量作用域</p>
+<p>全局变量：在脚本的任意位置被引用</p>
+<p>局部变量：只存在声明它的那个函数的内部，不能在函数的外部引用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">如果在某个函数中使用了var，那个变量被看做局部变量，只存在于函数的上下文中</div><div class="line">function square(num)&#123;</div><div class="line">    total = num*num;</div><div class="line">    return total;</div><div class="line">&#125;</div><div class="line">var total = 50;</div><div class="line">var number = square(20);</div><div class="line">alert(total);//400</div><div class="line">变式</div><div class="line">function square(num)&#123;</div><div class="line">    var total = num*num;</div><div class="line">    return total;</div><div class="line">&#125;</div><div class="line">var total = 50;</div><div class="line">var number = square(20);</div><div class="line">alert(total);//50</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;基本知识&quot;&gt;&lt;a href=&quot;#基本知识&quot; class=&quot;headerlink&quot; title=&quot;基本知识&quot;&gt;&lt;/a&gt;基本知识&lt;/h1&gt;&lt;p&gt;1.最好的做法把&lt;script&gt;标签放到html文档的最后，&lt;/script&gt;标签之前，这样能使浏览器更快的加载页面&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>正则的一些要求</title>
+    <link href="http://yoursite.com/2017/04/02/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://yoursite.com/2017/04/02/正则表达式/</id>
+    <published>2017-04-02T12:31:23.138Z</published>
+    <updated>2017-04-02T12:33:09.205Z</updated>
+    
+    <content type="html"><![CDATA[<p>创建一个RegExp的两种方法</p>
+<ol>
+<li>隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]</li>
+<li>显示创建 var reg = new RegExp(“正则表达式”,”gi”)<br>元字符</li>
+<li>{n}，用于指定前面的字符和组合连续出现多少次<br>例如：a{3},(\d){2}        注意1{3}去匹配1111111，结果是111， 111，它先匹配前三个1然后第二次匹配是在剩下的4个1中匹配</li>
+<li>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111</li>
+<li><ul>
+<li>表示匹配出现1次到任意多次</li>
+</ul>
+</li>
+<li><ul>
+<li>表示匹配出现0次到任意多次</li>
+</ul>
+</li>
+<li>？ 表示出现0次到1次</li>
+<li>【a-z】表示匹配a到z中任意一个字符</li>
+<li>【^a-z】表示匹配不是a到z中的任意一个字符</li>
+<li>\d表示匹配0-9中的任意一个数字，相当于【0-9】</li>
+<li>\D表示匹配不是0-9中的任意一个数字，相当于【^0-9】</li>
+<li>\w匹配任意英文字符、数字、下划线，相当于[a-zA-Z0-9_]</li>
+<li>\W与\w相反</li>
+<li>\s匹配任何空白字符（空格，制表符等）</li>
+<li>\S匹配任何非空白字符</li>
+<li>. 匹配出\n之外的所有字符，如果要匹配，本身则需要使用.</li>
+<li>定位符^匹配目标字符串的开始位置    $匹配目标字符串的结束位置</li>
+<li>要是想要匹配这些字符  . * + () $ / \ ? [] ^ {}需要用到转义符（) </li>
+<li>选择匹配符（|）既可以匹配这个，又可以匹配那个</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;创建一个RegExp的两种方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]&lt;/li&gt;
+&lt;li&gt;显示创建 var reg = new RegExp(“正则表达式”,”gi”)&lt;br&gt;元字符&lt;/l
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数组</title>
+    <link href="http://yoursite.com/2017/04/02/%E6%95%B0%E7%BB%84/"/>
+    <id>http://yoursite.com/2017/04/02/数组/</id>
+    <published>2017-04-02T12:31:23.136Z</published>
+    <updated>2017-04-02T12:32:36.560Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
+<li>数组的创建</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//法一</div><div class="line">var colors = new Array();</div><div class="line">var colors = new Array(20);//括号中可以填数组要保存的项目数量，这就是创建了length为20的数组</div><div class="line">var colors = new Array(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;);//括号也可以传递数组中应该包含的项</div><div class="line">//法二数组字面量表示法</div><div class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</div></pre></td></tr></table></figure>
+<p>2.元素的访问与修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];</div><div class="line">alert(colors[0]);//访问到了red，数组的访问是以0开始的</div><div class="line">colors[2] = &quot;black&quot;;//将第三项blue修改为了black</div><div class="line">colors[3] = &quot;yellow&quot;;//新增了第四项</div></pre></td></tr></table></figure>
+<p>3.数组的转换方法</p>
+<ul>
+<li>toString()</li>
+</ul>
+<p>每个值的字符串表示拼接成了一个字符串，中间以逗号分隔开</p>
+<ul>
+<li>toLocalString()</li>
+</ul>
+<p>返回值与toString（）方法一样，不同点在于调用每一项的toLocalString()方法</p>
+<ul>
+<li>valueOf</li>
+</ul>
+<p>与toString一样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">var person1 = &#123;</div><div class="line">    toLocalString : function()&#123;</div><div class="line">        return &quot;Nikolaos&quot;;</div><div class="line">    &#125;,</div><div class="line">    toString : function()&#123;</div><div class="line">        return &quot;Nicholas&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var person2 = &#123;</div><div class="line">    toLocalString : function()&#123;</div><div class="line">        return &quot;Grigorios&quot;;</div><div class="line">    &#125;,</div><div class="line">    toString : function()&#123;</div><div class="line">        return &quot;greg&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">var people = [person1,person2];</div><div class="line">alert(&quot;person&quot;);//Nicholas,Greg,因为alert要接受字符串参数，他会在后台调用toString（）方法</div><div class="line">alert(people.toString());//Nicholas,Greg</div><div class="line">alert(people.toLocalString());//Nikolaos,Grigorios</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">//补充一个join（）方法，他接受一个参数，这个参数是用作分隔符的字符串</div><div class="line">var colors = [&quot;red&quot;, &quot;green&quot;, &quot;yellow&quot;];</div><div class="line">alert(colors.join(&quot;||&quot;));//red||green||yellow</div></pre></td></tr></table></figure>
+<p>4.元素的添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var colors = new Array();</div><div class="line">var count = colors.push(&quot;red&quot;,&quot;green&quot;);</div><div class="line">alert(count);//2  push()方法接收任意参数，并且把他们逐项添加到数组末尾，注意的是他返回的是数组的长度</div><div class="line">var count2 = colors.unshift(&quot;black&quot;,&quot;blue&quot;);</div><div class="line">alert(count2); //3  colors[0]=black unshift()方法接收任意参数，并且把他们添加到数组前端，注意的是他返回的是数组的长度，而且如果一次添加多个，它的顺序是从右往左添加</div><div class="line"></div><div class="line">splice()方法，向指定位置插入任意数量的项，splice(起始位置，0，&quot;&quot;,&quot;&quot;.....)</div><div class="line">var colors = [&quot;red&quot;, &quot;green&quot;, &quot;brown&quot;];</div><div class="line">var removed = colors.splice(1,0,&quot;yellow&quot;,&quot;orange&quot;);</div><div class="line">alert(colors);//red,yellow,orange,green,yellow</div></pre></td></tr></table></figure>
+<p>5.元素的删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">colors.pop()//从数组末尾移除最后一项，返回的是移除的项</div><div class="line">colors.shift()//移除数组的第一项</div><div class="line">colos.splice(起始位置，项数)//删除从指定位置开始的项数</div></pre></td></tr></table></figure>
+<p>6.元素的合并与截取</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">截取</div><div class="line">colors.slice(起始位置)//获取指定位置到数组末尾的所有项</div><div class="line">colors.slice(起始位置，结束位置)//获取起始位置到结束位置之前的所有数组的项</div><div class="line">注意：要是参数中有负数，则用数组的长度加上该数来确定位置</div><div class="line"></div><div class="line">合并</div><div class="line">var colors = [&quot;red&quot;,&quot;green&quot;];</div><div class="line">var colors2 = colors.contact(&quot;yellow&quot;,[&quot;black&quot;,&quot;brown&quot;]);</div><div class="line">alert(colors2);//red,green,yellow,black,brown</div></pre></td></tr></table></figure>
+<p>7.排序</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">arr.reverse();//反转数组项</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">对数组元素排序</div><div class="line">function compare(value1,value2)&#123;</div><div class="line">			if (value1&lt;value2) &#123;</div><div class="line">				return-1;</div><div class="line">			&#125;else if (value1&gt;value2) &#123;</div><div class="line">				return 1;</div><div class="line">			&#125;else&#123;</div><div class="line">				return 0;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;</div><div class="line">		var values = [5,3,9,0,1];</div><div class="line">		values.sort(compare);</div><div class="line">		alert(values);</div></pre></td></tr></table></figure>
+<p>8.查找元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">indexOf()从数组的开头开始向后查找</div><div class="line">lastIndexOf从数组末尾开始向前查找</div><div class="line">找到返回位置，没找到就返回-1</div><div class="line"></div><div class="line"></div><div class="line">var numbers = [1,2,3,4,5,4,3,2,1]</div><div class="line">alert(numbers.indexOf(4));//3 这是从前向后找</div><div class="line">alert(numbers.lastIndexOf(4));//5 从后向前找</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;数组的创建&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>关于弹出层的总结</title>
