@@ -1,0 +1,677 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="关于弹出层的总结思路：现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的
+HTML
+12345678910111213141516&amp;lt;button id=&amp;quot;btnlogin&amp;quot;&amp;gt;登录&amp;lt;/button&amp;gt;&amp;lt;!--&amp;lt;div id=&amp;quot;mask&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/04/02/关于弹出层的总结/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关于弹出层的总结思路：现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的
+HTML
+12345678910111213141516&amp;lt;button id=&amp;quot;btnlogin&amp;quot;&amp;gt;登录&amp;lt;/button&amp;gt;&amp;lt;!--&amp;lt;div id=&amp;quot;mask&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;l">
+<meta property="og:updated_time" content="2017-03-02T03:08:11.467Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="关于弹出层的总结思路：现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的
+HTML
+12345678910111213141516&amp;lt;button id=&amp;quot;btnlogin&amp;quot;&amp;gt;登录&amp;lt;/button&amp;gt;&amp;lt;!--&amp;lt;div id=&amp;quot;mask&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;l">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/04/02/关于弹出层的总结/"/>
+
+
+
+
+
+  <title>  | Hexo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Startseite
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archiv
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/关于弹出层的总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-02T20:10:38+08:00">
+                2017-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="关于弹出层的总结"><a href="#关于弹出层的总结" class="headerlink" title="关于弹出层的总结"></a>关于弹出层的总结</h1><p>思路：<br>现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的</p>
+<p>HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;btnlogin&quot;&gt;登录&lt;/button&gt;</div><div class="line">&lt;!--&lt;div id=&quot;mask&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div id=&quot;login&quot;&gt;</div><div class="line">	&lt;div class=&quot;head&quot;&gt;</div><div class="line">		登录账号</div><div class="line">		&lt;div id=&quot;close&quot;&gt;×&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=&quot;contain&quot;&gt;</div><div class="line">		&lt;div class=&quot;user&quot;&gt;</div><div class="line">			用户名：&lt;span&gt;&lt;input type=&quot;text&quot; placeholder=&quot;用户名/手机/邮箱&quot;&gt;&lt;/span&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;password&quot;&gt;密码： &amp;nbsp; &amp;nbsp;&lt;input type=&quot;password&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;submit&quot;&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">--&gt;</div></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">#btnlogin&#123;</div><div class="line">	position: absolute;</div><div class="line">	right: 10px;</div><div class="line">	top: 10px;</div><div class="line">&#125;</div><div class="line">#mask&#123;</div><div class="line">	background-color: black;</div><div class="line">	opacity: 0.5;//设置透明度</div><div class="line">	width: 100%;</div><div class="line">	z-index: 1000;//设置优先级</div><div class="line">&#125;</div><div class="line">#login&#123;</div><div class="line">	position: fixed;</div><div class="line">	left: 30%;</div><div class="line">	top: 30%;</div><div class="line">	border: 1px solid black;</div><div class="line">	z-index: 1001;</div><div class="line">&#125;</div><div class="line">.head&#123;</div><div class="line">	width: 400px;</div><div class="line">	height: 40px;</div><div class="line">	background-color: #666666;</div><div class="line">	position: relative;</div><div class="line">	text-align: left;</div><div class="line">	line-height: 40px;</div><div class="line">	font-size: 20px;</div><div class="line">	cursor: move;//鼠标放在登录框顶部会变成十字按钮</div><div class="line">&#125;</div><div class="line">.contain&#123;</div><div class="line">	width: 400px;</div><div class="line">	height: 250px;</div><div class="line">	position: relative;</div><div class="line">	background-color: white;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#close&#123;</div><div class="line">	width: 30px;</div><div class="line">	height: 30px;</div><div class="line">	cursor: pointer;</div><div class="line">	position: absolute;</div><div class="line">	right: 5px;</div><div class="line">	top: 5px;</div><div class="line">	text-align: center;</div><div class="line">	line-height: 30px;</div><div class="line">	font-size: 25px;</div><div class="line">&#125;</div><div class="line">.user, .password, .submit&#123;</div><div class="line">	padding-top: 25px;</div><div class="line">	margin-left: 25px;</div><div class="line">	width: 350px;</div><div class="line">	height: 50px;</div><div class="line">&#125;</div><div class="line">.contain input&#123;</div><div class="line">	width: 200px;</div><div class="line">	height: 40px;</div><div class="line">	border: 1px solid black;</div><div class="line">&#125;</div><div class="line">.submit input&#123;</div><div class="line">	background-color: #3F89EC;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>JS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">window.onload=function()&#123;</div><div class="line">	var obtn = document.getElementById(&quot;btnlogin&quot;);//获取登录按钮</div><div class="line">	obtn.onclick = function()&#123;</div><div class="line">//遮罩层</div><div class="line">	    var height = document.body.scrollHeight;//scrollHeight表示元素的总高度，包括由于溢出而无法展示在网页的不可见部分</div><div class="line">	    var width = document.body.scrollWidth;</div><div class="line">	    var mask = document.createElement(&quot;div&quot;);//创建div</div><div class="line">	    mask.id =&quot;mask&quot;;//给他赋ID为mask</div><div class="line">	    mask.style.height = height+&quot;px&quot;;//给他赋高度与宽度</div><div class="line">	    mask.style.width = width+&quot;px&quot;;</div><div class="line">	    mask.style.backgroundColor=&quot;black&quot;;</div><div class="line">	    document.body.appendChild(mask);//将遮罩层添加到body中</div><div class="line">//登录</div><div class="line">	var login = document.createElement(&quot;div&quot;);//创建登录框</div><div class="line">	login.id = &quot;login&quot;; </div><div class="line">//可视区域</div><div class="line">	var wheight = document.documentElement.clientHeight;</div><div class="line">	var wwidth = document.documentElement.clientWidth;</div><div class="line">	login.innerHTML=&quot;&lt;div class=&apos;head&apos;&gt;登录账号&lt;div id=&apos;close&apos;&gt;×&lt;/div&gt;&lt;/div&gt;&lt;div class=&apos;contain&apos;&gt;&lt;div class=&apos;user&apos;&gt;用户名：&lt;span&gt;&lt;input type=&apos;text&apos; placeholder=&apos;用户名/手机/邮箱&apos;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&apos;password&apos;&gt;密码： &amp;nbsp; &amp;nbsp;&lt;input type=&apos;password&apos;&gt;&lt;/div&gt;&lt;div class=&apos;submit&apos;&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;input type=&apos;submit&apos; value=&apos;登录&apos;&gt;&lt;/div&gt;&lt;/div&gt;&quot;//添加HTML中ID为login的div下的代码</div><div class="line">	document.body.appendChild(login);//将div添加到body中</div><div class="line">//本身</div><div class="line">	var dheight = login.offsetHeight;//获取登录框自己的高度与宽度</div><div class="line">	var dwidth = login.offsetWidth;</div><div class="line">	login.style.left = (wwidth-dwidth)/2+&quot;px&quot;;//使登录框居中</div><div class="line">	login.style.top = (wheight-dheight)/2+&quot;px&quot;;</div><div class="line">//设置关闭功能	</div><div class="line">	var oclose=document.getElementById(&quot;close&quot;);</div><div class="line">	mask.onclick=oclose.onclick=function()&#123;</div><div class="line">		document.body.removeChild(mask);</div><div class="line">		document.body.removeChild(login);</div><div class="line">	&#125;</div><div class="line">	&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>做到这一个登录框的基本弹出效果就做的差不多了<br>最后我们给他在增加一个拖拽功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">var mouseoffsetx = 0;//偏移</div><div class="line">var mouseoffsety = 0;</div><div class="line">var isdraging = false;//定义一个变量表示是否可以拖拽</div><div class="line">//事件1   计算鼠标相对于登录框左上角的坐标，标记元素为可拖动</div><div class="line">	document.onmousedown = function(e)&#123;</div><div class="line">		mouseoffsetx = e.pageX-login.offsetLeft;//鼠标相对于整个页面的坐标减去登录框相对于左边的距离</div><div class="line">		mouseoffsety = e.pageY-login.offsetTop;</div><div class="line">		isdraging = true;</div><div class="line">//事件2,检测是否标记为移动，是的话更新元素位置到当前位置</div><div class="line">	document.onmousemove = function(e)&#123;</div><div class="line">		var login1 = document.getElementById(&quot;login&quot;);</div><div class="line">		var mousex = e.pageX;</div><div class="line">		var mousey = e.pageY;//当前位置</div><div class="line">		var movex = 0;</div><div class="line">		var movey = 0;</div><div class="line">		if (isdraging===true) &#123;</div><div class="line"></div><div class="line">			movex = mousex - mouseoffsetx;</div><div class="line">			movey = mousey - mouseoffsety;</div><div class="line">//界限，防止登录框拖拽不见</div><div class="line">			var maxX = wwidth - dwidth;</div><div class="line">			var maxY = wheight - dheight;</div><div class="line">			movex=(maxX,Math.max(0,movex));</div><div class="line">			movey=(maxY,Math.max(0,movey));</div><div class="line">			login1.style.left = movex + &quot;px&quot;;</div><div class="line">			login1.style.top = movey + &quot;px&quot;;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">//事件3，鼠标松开显示不可拖拽</div><div class="line">	document.onmouseup=function()&#123;</div><div class="line">		isdraging = false;</div><div class="line">	&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>至此一个弹出框的基本效果就已经写完了</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/02/数组/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="John Doe" />
+          <p class="site-author-name" itemprop="name">John Doe</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">Artikel</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于弹出层的总结"><span class="nav-number">1.</span> <span class="nav-text">关于弹出层的总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+
+
+<div class="powered-by">
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
