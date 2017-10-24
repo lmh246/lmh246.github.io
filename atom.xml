@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Welcome to my blog</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-22T14:51:55.316Z</updated>
+  <updated>2017-10-24T09:15:11.287Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>lmh</name>
     
   </author>
   
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/04/22/%E5%9F%BA%E7%A1%80%E4%B8%80/"/>
     <id>http://yoursite.com/2017/04/22/基础一/</id>
     <published>2017-04-22T14:36:00.495Z</published>
-    <updated>2017-04-22T14:51:55.316Z</updated>
+    <updated>2017-10-24T09:15:11.287Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文本对齐"><a href="#文本对齐" class="headerlink" title="文本对齐"></a>文本对齐</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">text-left居左对齐</div><div class="line">text-center居中对齐</div><div class="line">text-right居右对齐</div><div class="line">text-justify两端对齐</div></pre></td></tr></table></figure>
 <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">list-unstyled去点列表（去编号）</div><div class="line">list-inline内联列表，即把垂直列表换成水平列表，而且去掉项目符号（编号），保持水平显示。</div></pre></td></tr></table></figure>
@@ -48,6 +48,8 @@
     
     </summary>
     
+      <category term="bootstrap" scheme="http://yoursite.com/categories/bootstrap/"/>
+    
     
   </entry>
   
@@ -56,7 +58,7 @@
     <link href="http://yoursite.com/2017/04/22/%E7%BD%91%E6%A0%BC/"/>
     <id>http://yoursite.com/2017/04/22/网格/</id>
     <published>2017-04-22T14:35:47.827Z</published>
-    <updated>2017-04-22T14:51:56.570Z</updated>
+    <updated>2017-10-24T09:16:01.738Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一-用法"><a href="#一-用法" class="headerlink" title="一.用法"></a>一.用法</h1><h2 id="1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding"><a href="#1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding" class="headerlink" title="1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)"></a>1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p><img src="http://ootf4jurd.bkt.clouddn.com/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80.jpg" alt="image"></p>
@@ -81,6 +83,8 @@
     
     </summary>
     
+      <category term="bootstrap" scheme="http://yoursite.com/categories/bootstrap/"/>
+    
     
   </entry>
   
@@ -89,7 +93,7 @@
     <link href="http://yoursite.com/2017/04/08/%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/08/事件处理/</id>
     <published>2017-04-08T15:16:51.148Z</published>
-    <updated>2017-04-08T15:18:36.297Z</updated>
+    <updated>2017-10-24T09:14:39.038Z</updated>
     
     <content type="html"><![CDATA[<h1 id="事件处理程序"><a href="#事件处理程序" class="headerlink" title="事件处理程序"></a>事件处理程序</h1><h5 id="1-HTML事件处理程序"><a href="#1-HTML事件处理程序" class="headerlink" title="1. HTML事件处理程序"></a>1. HTML事件处理程序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; onclick=&quot;showmes()&quot;&gt;</div><div class="line">javascript代码</div><div class="line">function showmes()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。</p>
@@ -109,6 +113,8 @@
     
     </summary>
     
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
+    
     
   </entry>
   
@@ -117,7 +123,7 @@
     <link href="http://yoursite.com/2017/04/08/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/04/08/事件对象/</id>
     <published>2017-04-08T15:16:40.455Z</published>
-    <updated>2017-04-08T15:18:10.642Z</updated>
+    <updated>2017-10-24T09:14:34.267Z</updated>
     
     <content type="html"><![CDATA[<h1 id="事件对象（运用事件处理中的函数）"><a href="#事件对象（运用事件处理中的函数）" class="headerlink" title="事件对象（运用事件处理中的函数）"></a>事件对象（运用事件处理中的函数）</h1><h5 id="1-DOM中的对象"><a href="#1-DOM中的对象" class="headerlink" title="1.DOM中的对象"></a>1.DOM中的对象</h5><ol>
 <li>type属性，用于获取事件类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">			function show(event)&#123;</div><div class="line">				alert(event.type);</div><div class="line">			&#125;</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);//弹出结果为click</div></pre></td></tr></table></figure>
@@ -142,6 +148,8 @@
     
     </summary>
     
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
+    
     
   </entry>
   
@@ -150,7 +158,7 @@
     <link href="http://yoursite.com/2017/04/02/%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/02/轮播图的原理/</id>
     <published>2017-04-02T12:43:01.469Z</published>
-    <updated>2017-04-22T14:51:58.139Z</updated>
+    <updated>2017-10-24T09:14:55.071Z</updated>
     
     <content type="html"><![CDATA[<h1 id="轮播图的原理"><a href="#轮播图的原理" class="headerlink" title="轮播图的原理"></a>轮播图的原理</h1><p>一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播<br><img src="http://ootf4jurd.bkt.clouddn.com/%E8%BD%AE%E6%92%AD.png" alt="image"><br>html代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;container&quot;&gt;</div><div class="line">&lt;div id=&quot;list&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;a id=&quot;btnleft&gt;&lt;img src=&quot;左.png&quot; class=&quot;left&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a id=&quot;btnright&quot;&gt;&lt;img src=&quot;右.jpg&quot; class=&quot;right&quot;&gt;&lt;/a&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div id=&quot;buttons&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
@@ -174,6 +182,8 @@
     
     </summary>
     
+      <category term="组件" scheme="http://yoursite.com/categories/%E7%BB%84%E4%BB%B6/"/>
+    
     
   </entry>
   
@@ -182,7 +192,7 @@
     <link href="http://yoursite.com/2017/04/02/%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
     <id>http://yoursite.com/2017/04/02/基本知识/</id>
     <published>2017-04-02T12:31:23.139Z</published>
-    <updated>2017-04-02T12:32:13.948Z</updated>
+    <updated>2017-10-24T09:15:28.873Z</updated>
     
     <content type="html"><![CDATA[<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p>1.最好的做法把<script>标签放到html文档的最后，</script>标签之前，这样能使浏览器更快的加载页面</p>
 <p>2.JavaScript中，变量和其他语法元素都是区分字母大小写的</p>
@@ -201,6 +211,8 @@
       &lt;h1 id=&quot;基本知识&quot;&gt;&lt;a href=&quot;#基本知识&quot; class=&quot;headerlink&quot; title=&quot;基本知识&quot;&gt;&lt;/a&gt;基本知识&lt;/h1&gt;&lt;p&gt;1.最好的做法把&lt;script&gt;标签放到html文档的最后，&lt;/script&gt;标签之前，这样能使浏览器更快的加载页面&lt;/p&gt;
     
     </summary>
+    
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
     
     
   </entry>
@@ -259,7 +271,7 @@
     <link href="http://yoursite.com/2017/04/02/%E6%95%B0%E7%BB%84/"/>
     <id>http://yoursite.com/2017/04/02/数组/</id>
     <published>2017-04-02T12:31:23.136Z</published>
-    <updated>2017-04-02T12:32:36.560Z</updated>
+    <updated>2017-10-24T09:13:07.996Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
 <li>数组的创建</li>
@@ -302,6 +314,8 @@
     
     </summary>
     
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
+    
     
   </entry>
   
@@ -310,7 +324,7 @@
     <link href="http://yoursite.com/2017/04/02/%E5%85%B3%E4%BA%8E%E5%BC%B9%E5%87%BA%E5%B1%82%E7%9A%84%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/04/02/关于弹出层的总结/</id>
     <published>2017-04-02T12:18:49.000Z</published>
-    <updated>2017-04-02T12:26:44.825Z</updated>
+    <updated>2017-10-24T09:15:45.177Z</updated>
     
     <content type="html"><![CDATA[<h1 id="关于弹出层的总结"><a href="#关于弹出层的总结" class="headerlink" title="关于弹出层的总结"></a>关于弹出层的总结</h1><p>思路：<br>现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的</p>
 <p>HTML</p>
@@ -329,6 +343,8 @@
       &lt;h1 id=&quot;关于弹出层的总结&quot;&gt;&lt;a href=&quot;#关于弹出层的总结&quot; class=&quot;headerlink&quot; title=&quot;关于弹出层的总结&quot;&gt;&lt;/a&gt;关于弹出层的总结&lt;/h1&gt;&lt;p&gt;思路：&lt;br&gt;现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在
     
     </summary>
+    
+      <category term="组件" scheme="http://yoursite.com/categories/%E7%BB%84%E4%BB%B6/"/>
     
     
   </entry>
