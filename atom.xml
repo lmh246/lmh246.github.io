@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-03-15T16:09:33.164Z</updated>
+  <updated>2018-03-15T16:26:57.842Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,139 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dom</title>
+    <link href="http://yoursite.com/2018/03/16/dom/"/>
+    <id>http://yoursite.com/2018/03/16/dom/</id>
+    <published>2018-03-15T16:24:48.185Z</published>
+    <updated>2018-03-15T16:26:57.842Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>《JavaScriptDOM编程艺术》第七章</p>
+<ul>
+<li>创建元素节点<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document.createElement(nodeName)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>创建文本节点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">document,createTextNode(text)</div></pre></td></tr></table></figure>
+</li>
+<li><p>添加元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parent.appendChild(child)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li>插入指定位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">插入到指定位置之前：insertBefore()这是JavaScript自带的DOM函数</div><div class="line">使用方法：parentElement.insertBefore(newElement,targeent)</div><div class="line"></div><div class="line">插入到指定位置之后：insertAfter()这并不是自带的，我们可以自己编写</div><div class="line">function insertAfter(newElement,targetElement)&#123;</div><div class="line">    var parent = targetElement.parentNode;</div><div class="line">    if(parent.lastChild == targetElement)&#123;</div><div class="line">        parent.appendChild(newElement);</div><div class="line">    &#125;else&#123;</div><div class="line">        parent.insertAfter(newElement,targetElement.nextSiblinf);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">下面解释一下这个函数：</div><div class="line">if 判断目标元素是不是parent的最后一个元素,如果是的话直接使用appendChild函数就好，会直接把它插入目标元素后面</div><div class="line"></div><div class="line">如果不是的话就把新元素添加到目标元素与目标元素下一个兄弟元素之间</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;《JavaScriptDOM编程艺术》第七章&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建元素节点&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;document.createElement(nodeName)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;创建文本节点&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;document,createTextNode(text)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;添加元素&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;parent.appendChild(child)&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript标签</title>
+    <link href="http://yoursite.com/2018/03/16/JavaScript%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2018/03/16/JavaScript学习/</id>
+    <published>2018-03-15T16:22:16.330Z</published>
+    <updated>2018-03-15T16:23:41.285Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Javascript的使用位置"><a href="#Javascript的使用位置" class="headerlink" title="Javascript的使用位置"></a>Javascript的使用位置</h1><h4 id="1-标签的位置"><a href="#1-标签的位置" class="headerlink" title="1.标签的位置"></a>1.标签的位置</h4><h6 id="一般来说是放在文档的标签中"><a href="#一般来说是放在文档的标签中" class="headerlink" title="一般来说是放在文档的标签中"></a>一般来说是放在文档的<head>标签中</head></h6><p><strong>缺点</strong>：</p>
+<ul>
+<li>必须等全部的JavaScript代码被下载、解析、执行完成之后，才会开始呈现页面的内容（即遇到<body>标签），如果那个页面有多个JavaScript文件，会使页面的呈现出现延迟，期间页面空白，用户体验不好。</body></li>
+</ul>
+<a id="more"></a>
+<h6 id="放在之前，即元素中页面内容的后面"><a href="#放在之前，即元素中页面内容的后面" class="headerlink" title="放在之前，即元素中页面内容的后面"></a>放在之前，即<body>元素中页面内容的后面</body></h6><p><strong>优点</strong>：</p>
+<ul>
+<li>在解析JavaScript代码之前，页面内容将完全呈现在浏览器中，会使用户感觉打开页面变快。</li>
+</ul>
+<h4 id="2-元素的一些属性"><a href="#2-元素的一些属性" class="headerlink" title="2.元素的一些属性"></a>2.<script>元素的一些属性</h4><h6 id="1-async"><a href="#1-async" class="headerlink" title="[1].async"></a>[1].async</h6><p>表示立即下载脚本，不妨碍页面的其他操作，比如下载其他资源等。</p>
+<p>==不按照脚本的先后顺序。只对外部脚本有效。==</p>
+<h6 id="2-defer"><a href="#2-defer" class="headerlink" title="[2].defer"></a>[2].defer</h6><p>表示立即下载脚本，但是延迟到整个页面都解析完毕后执行。</p>
+<p>==按照脚本的先后顺序执行。只适用于外部脚本。==</p>
+<h4 id="3-使用外部文件的优点"><a href="#3-使用外部文件的优点" class="headerlink" title="3.使用外部文件的优点"></a>3.使用外部文件的优点</h4><ul>
+<li><strong>可维护性</strong></li>
+<li><strong>可缓存</strong></li>
+</ul>
+<p>浏览器根据具体的设置缓存链接的所有外部JavaScript文件。当两个页面使用同一份JavaScript文件时，只需下载一次。加快页面加载的速度。</p>
+<ul>
+<li><strong>适应未来</strong></li>
+</ul>
+<h4 id="4-标签"><a href="#4-标签" class="headerlink" title="4.标签"></a>4.<noscript>标签</h4><p>包含任何可以出现在<body>元素中的标签</p>
+<p>作用：当浏览器不支持JavaScript的时候在页面中显示替代的内容。</p>
+<p>作用条件：</p>
+<ul>
+<li><strong>浏览器不支持脚本</strong></li>
+<li><strong>支持脚本但是被禁用</strong></li>
+</ul>
+</script></h4>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Javascript的使用位置&quot;&gt;&lt;a href=&quot;#Javascript的使用位置&quot; class=&quot;headerlink&quot; title=&quot;Javascript的使用位置&quot;&gt;&lt;/a&gt;Javascript的使用位置&lt;/h1&gt;&lt;h4 id=&quot;1-标签的位置&quot;&gt;&lt;a href=&quot;#1-标签的位置&quot; class=&quot;headerlink&quot; title=&quot;1.标签的位置&quot;&gt;&lt;/a&gt;1.标签的位置&lt;/h4&gt;&lt;h6 id=&quot;一般来说是放在文档的标签中&quot;&gt;&lt;a href=&quot;#一般来说是放在文档的标签中&quot; class=&quot;headerlink&quot; title=&quot;一般来说是放在文档的标签中&quot;&gt;&lt;/a&gt;一般来说是放在文档的&lt;head&gt;标签中&lt;/head&gt;&lt;/h6&gt;&lt;p&gt;&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须等全部的JavaScript代码被下载、解析、执行完成之后，才会开始呈现页面的内容（即遇到&lt;body&gt;标签），如果那个页面有多个JavaScript文件，会使页面的呈现出现延迟，期间页面空白，用户体验不好。&lt;/body&gt;&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="javaScript" scheme="http://yoursite.com/categories/javaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>webpack学习</title>
+    <link href="http://yoursite.com/2018/03/16/webpack%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/03/16/webpack使用/</id>
+    <published>2018-03-15T16:20:29.802Z</published>
+    <updated>2018-03-15T16:21:20.716Z</updated>
+    
+    <content type="html"><![CDATA[<p>webpack使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">webpack src/app.js dist/app.bundle.js</div><div class="line">其中src/app.js 就是你要编译的文件的路径</div><div class="line">dist/app.bundle.js就是编译后文件所在的路径</div><div class="line"></div><div class="line"></div><div class="line">webpack src/app.js dist/app.bundle.js --watch</div><div class="line"></div><div class="line">后面加个--watch可以实时监测app.js 文件的内容，一旦发生变化，app.bundle.js的内容也会自动变化</div><div class="line"></div><div class="line">webpack src/app.js dist/app.bundle.js -p</div><div class="line"></div><div class="line">后面加个-p可以压缩文件内容，去掉了空格</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>配置文件<br>新建webpack.config.js<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;</div><div class="line">	entry: &apos;./src/app.js&apos;,</div><div class="line">	output: &#123;</div><div class="line">		filename: &apos;./dist/app.bundle.js&apos;</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">entry: 入口文件</div><div class="line">output： 输出文件</div></pre></td></tr></table></figure></p>
+<p>命令写进package.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">修改scripts属性</div><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">    &quot;dev&quot;: &quot;webpack --watch&quot;,</div><div class="line">    &quot;prod&quot;: &quot;webpack -p&quot;</div><div class="line">  &#125;</div><div class="line">  </div><div class="line">  </div><div class="line">如何使用</div><div class="line">cnpm run dev</div><div class="line">cnpm run prod</div></pre></td></tr></table></figure></p>
+<p>插件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">html-webpack-plugin</div><div class="line"></div><div class="line">使用方法：</div><div class="line">在配置文件中：</div><div class="line">var HtmlWebpackPlugin = require(&apos;html-webpack-plugin&apos;);</div><div class="line">module.exports = &#123;</div><div class="line">	entry: &apos;./src/app.js&apos;,</div><div class="line">	output: &#123;</div><div class="line">		path: __dirname + &apos;/dist&apos;,</div><div class="line">		filename: &apos;app.bundle.js&apos;</div><div class="line">	&#125;,</div><div class="line">	plugins: [</div><div class="line">		new HtmlWebpackPlugin()</div><div class="line">	]</div><div class="line">&#125;;</div><div class="line"></div><div class="line">在plugins中有一些可选的参数：</div><div class="line">title:设置网页title</div><div class="line">template：设置网页模板</div><div class="line">minify: 去掉HTML文件空格</div><div class="line">等等</div><div class="line"></div><div class="line">如何配置：</div><div class="line">...</div><div class="line">plugins: [</div><div class="line">		new HtmlWebpackPlugin(&#123;</div><div class="line">			title: &quot;MY app&quot;,</div><div class="line">			template: &apos;src/index.html&apos;//新建一个HTML文件，在里面写一些东西，其中标题的话，要写成	&lt;title&gt;&lt;%= htmlWebpackPlugin.options.title %&gt;&lt;/title&gt;</div><div class="line"></div><div class="line">		&#125;)</div><div class="line">	]</div></pre></td></tr></table></figure></p>
+<p>处理css文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line">使用css-loader</div><div class="line"></div><div class="line">安装</div><div class="line">cnpm install --save-dev css-loader</div><div class="line">cnpm install --save-dev style-loader</div><div class="line"></div><div class="line">使用</div><div class="line">在app.js文件中，引入</div><div class="line">import css from &apos;./app.css&apos;</div><div class="line"></div><div class="line">修改webpack.config.js 文件，添加</div><div class="line">module: &#123;</div><div class="line">		rules: [</div><div class="line">		  &#123;</div><div class="line">		    test: /\.css$/,</div><div class="line">		    use: [ &apos;style-loader&apos;, &apos;css-loader&apos; ]</div><div class="line">		  &#125;</div><div class="line">		]</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line"></div><div class="line"></div><div class="line">	</div><div class="line">使用sass-loader</div><div class="line"></div><div class="line">安装</div><div class="line">npm install sass-loader node-sass webpack --save-dev</div><div class="line"></div><div class="line">使用</div><div class="line">在app.js文件中，引入</div><div class="line">import css from &apos;./app.scss&apos;</div><div class="line"></div><div class="line">修改webpack.config.js 文件，添加</div><div class="line">module: &#123;</div><div class="line">		rules: [</div><div class="line">		  &#123;</div><div class="line">		    test: /\.css$/,</div><div class="line">		    use: [ &apos;style-loader&apos;, &apos;css-loader&apos;, &apos;sass-loader&apos; ]</div><div class="line">		  &#125;</div><div class="line">		]</div><div class="line">	&#125;</div><div class="line"></div><div class="line">结果：</div><div class="line">我们会发现使用了sass-loader之后，那个css文件并不会改变，他是在app.bundle.js中添加了css样式</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">Extract Text Plugin</div><div class="line">分离出css文件</div><div class="line"></div><div class="line">安装</div><div class="line">npm install --save-dev extract-text-webpack-plugin  （适用于webpack3）</div><div class="line"></div><div class="line">使用</div><div class="line">const ExtractTextPlugin = require(&quot;extract-text-webpack-plugin&quot;);</div><div class="line"></div><div class="line">修改webpack.config.js 文件，添加</div><div class="line">module: &#123;</div><div class="line">	    rules: [</div><div class="line">	      &#123;</div><div class="line">	        //原文件的后缀，比如css，scss</div><div class="line">	        test: /\.scss$/,</div><div class="line">	        use: ExtractTextPlugin.extract(&#123;</div><div class="line">	          fallback: &quot;style-loader&quot;,</div><div class="line">	          use: [&quot;css-loader&quot;, &quot;sass-loader&quot;]</div><div class="line">	        &#125;)</div><div class="line">	      &#125;</div><div class="line">	    ]</div><div class="line">  	&#125;</div><div class="line">  	</div><div class="line">plugins: [</div><div class="line">		new ExtractTextPlugin(&quot;styles.css&quot;),</div><div class="line">]</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;webpack使用&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;webpack src/app.js dist/app.bundle.js&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;其中src/app.js 就是你要编译的文件的路径&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;dist/app.bundle.js就是编译后文件所在的路径&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;webpack src/app.js dist/app.bundle.js --watch&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;后面加个--watch可以实时监测app.js 文件的内容，一旦发生变化，app.bundle.js的内容也会自动变化&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;webpack src/app.js dist/app.bundle.js -p&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;后面加个-p可以压缩文件内容，去掉了空格&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="webpack" scheme="http://yoursite.com/categories/webpack/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>bootstrap基础一</title>

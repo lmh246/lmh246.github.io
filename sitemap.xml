@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/03/16/dom/</loc>
+    
+    <lastmod>2018-03-15T16:26:57.842Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/16/JavaScript%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2018-03-15T16:23:41.285Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/03/16/webpack%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2018-03-15T16:21:20.716Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/04/22/%E7%BD%91%E6%A0%BC/</loc>
     
     <lastmod>2018-03-15T16:16:25.041Z</lastmod>
