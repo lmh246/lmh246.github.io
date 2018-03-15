@@ -102,7 +102,7 @@
 隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]
 显示创建 var reg = new RegExp(“正则表达式”,”gi”)元字符
 {n}，用于指定前面的字符和组合连续出现多少次例如：a{3},(\d){2}        注意1{3}去匹配1111111，结果是111， 111，它先匹配前三个1然后第二次匹配">
-<meta property="og:updated_time" content="2018-03-15T16:00:46.253Z">
+<meta property="og:updated_time" content="2018-03-15T16:14:20.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则的一些要求">
 <meta name="twitter:description" content="创建一个RegExp的两种方法
@@ -368,7 +368,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  463
+                  462
                 </span>
               
 
@@ -410,7 +410,9 @@
 <li>隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]</li>
 <li>显示创建 var reg = new RegExp(“正则表达式”,”gi”)<br>元字符</li>
 <li>{n}，用于指定前面的字符和组合连续出现多少次<br>例如：a{3},(\d){2}        注意1{3}去匹配1111111，结果是111， 111，它先匹配前三个1然后第二次匹配是在剩下的4个1中匹配</li>
-<li>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111<br>&lt; !–more–&gt;</li>
+<li><p>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111</p>
+<a id="more"></a>
+</li>
 <li><ul>
 <li>表示匹配出现1次到任意多次</li>
 </ul>

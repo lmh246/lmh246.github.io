@@ -59,10 +59,10 @@
     <link href="http://yoursite.com/2017/04/22/%E7%BD%91%E6%A0%BC/"/>
     <id>http://yoursite.com/2017/04/22/网格/</id>
     <published>2017-04-22T14:35:47.828Z</published>
-    <updated>2018-03-15T16:00:32.065Z</updated>
+    <updated>2018-03-15T16:14:13.003Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一-用法"><a href="#一-用法" class="headerlink" title="一.用法"></a>一.用法</h1><h2 id="1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding"><a href="#1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding" class="headerlink" title="1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)"></a>1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p><img src="http://ootf4jurd.bkt.clouddn.com/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80.jpg" alt="image"><br>&lt; !–more–&gt;</p>
+<p><img src="http://ootf4jurd.bkt.clouddn.com/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80.jpg" alt="image"><br><a id="more"></a></p>
 <ul>
 <li>标号为2的那一行，每一列拥有左边距（padding-left）与右边距(padding-right)，并且都为15px，所以整体那一个布局就有15px与15px的左右边距。</li>
 <li>如果放在类名为row的div中，那么那个类名会自动添加margin-left与margin-right属性，来抵消整体的左右内边距<h2 id="2、在行-row-中可以添加列-column-，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）"><a href="#2、在行-row-中可以添加列-column-，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）" class="headerlink" title="2、在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）"></a>2、在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）</h2><h3 id="常用类型"><a href="#常用类型" class="headerlink" title="常用类型"></a>常用类型</h3><h4 id="4-8型"><a href="#4-8型" class="headerlink" title="4,8型"></a>4,8型</h4></li>
@@ -80,7 +80,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;一-用法&quot;&gt;&lt;a href=&quot;#一-用法&quot; class=&quot;headerlink&quot; title=&quot;一.用法&quot;&gt;&lt;/a&gt;一.用法&lt;/h1&gt;&lt;h2 id=&quot;1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding&quot;&gt;
+      &lt;h1 id=&quot;一-用法&quot;&gt;&lt;a href=&quot;#一-用法&quot; class=&quot;headerlink&quot; title=&quot;一.用法&quot;&gt;&lt;/a&gt;一.用法&lt;/h1&gt;&lt;h2 id=&quot;1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding&quot;&gt;&lt;a href=&quot;#1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding&quot; class=&quot;headerlink&quot; title=&quot;1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)&quot;&gt;&lt;/a&gt;1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;lt;div class=&amp;quot;row&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;/div&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;http://ootf4jurd.bkt.clouddn.com/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80.jpg&quot; alt=&quot;image&quot;&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -94,10 +95,10 @@
     <link href="http://yoursite.com/2017/04/08/%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/08/事件处理/</id>
     <published>2017-04-08T15:16:51.149Z</published>
-    <updated>2018-03-15T16:00:03.795Z</updated>
+    <updated>2018-03-15T16:13:44.412Z</updated>
     
     <content type="html"><![CDATA[<h1 id="事件处理程序"><a href="#事件处理程序" class="headerlink" title="事件处理程序"></a>事件处理程序</h1><h5 id="1-HTML事件处理程序"><a href="#1-HTML事件处理程序" class="headerlink" title="1. HTML事件处理程序"></a>1. HTML事件处理程序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; onclick=&quot;showmes()&quot;&gt;</div><div class="line">javascript代码</div><div class="line">function showmes()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。<br>&lt; !–more–&gt;</p>
+<p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。<br><a id="more"></a></p>
 <h5 id="2-dom0级"><a href="#2-dom0级" class="headerlink" title="2.dom0级"></a>2.dom0级</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; id=&quot;btn&gt;</div><div class="line">javascript代码</div><div class="line">var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">btn.onclick = function()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>缺点：不能同时绑定多个相同的事件，不然这个事件就会被覆盖，直接执行最后一个事件<br>优点：可以绑定多个不同的事件，可以兼容浏览器</p>
 <h5 id="3-dom2级"><a href="#3-dom2级" class="headerlink" title="3.dom2级"></a>3.dom2级</h5><p>chorme,firefox浏览器中</p>
@@ -110,7 +111,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;事件处理程序&quot;&gt;&lt;a href=&quot;#事件处理程序&quot; class=&quot;headerlink&quot; title=&quot;事件处理程序&quot;&gt;&lt;/a&gt;事件处理程序&lt;/h1&gt;&lt;h5 id=&quot;1-HTML事件处理程序&quot;&gt;&lt;a href=&quot;#1-HTML事件处理程序&quot; class=&quot;head
+      &lt;h1 id=&quot;事件处理程序&quot;&gt;&lt;a href=&quot;#事件处理程序&quot; class=&quot;headerlink&quot; title=&quot;事件处理程序&quot;&gt;&lt;/a&gt;事件处理程序&lt;/h1&gt;&lt;h5 id=&quot;1-HTML事件处理程序&quot;&gt;&lt;a href=&quot;#1-HTML事件处理程序&quot; class=&quot;headerlink&quot; title=&quot;1. HTML事件处理程序&quot;&gt;&lt;/a&gt;1. HTML事件处理程序&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;HTML中的代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;按钮&amp;quot; onclick=&amp;quot;showmes()&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;javascript代码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;function showmes()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    alert(&amp;quot;123&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -124,13 +126,14 @@
     <link href="http://yoursite.com/2017/04/08/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/04/08/事件对象/</id>
     <published>2017-04-08T15:16:40.456Z</published>
-    <updated>2018-03-15T16:00:15.526Z</updated>
+    <updated>2018-03-15T16:13:59.352Z</updated>
     
     <content type="html"><![CDATA[<h1 id="事件对象（运用事件处理中的函数）"><a href="#事件对象（运用事件处理中的函数）" class="headerlink" title="事件对象（运用事件处理中的函数）"></a>事件对象（运用事件处理中的函数）</h1><h5 id="1-DOM中的对象"><a href="#1-DOM中的对象" class="headerlink" title="1.DOM中的对象"></a>1.DOM中的对象</h5><ol>
 <li>type属性，用于获取事件类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">			function show(event)&#123;</div><div class="line">				alert(event.type);</div><div class="line">			&#125;</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);//弹出结果为click</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>&lt; !–more–&gt;<br>2.target属性，用于获取事件目标</p>
+<a id="more"></a>
+<p>2.target属性，用于获取事件目标</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">			function show(event)&#123;</div><div class="line">				alert(event.target);</div><div class="line">			&#125;</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);//弹出结果为objext htmlinputelement</div></pre></td></tr></table></figure>
 <p>3.事件冒泡，从最和内层的元素逐渐到它最外层的父元素</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div1&quot;&gt;</div><div class="line">	&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">	var div1 = document.getElementById(&quot;div1&quot;);</div><div class="line">	function show2()&#123;</div><div class="line">		alert(&quot;div1&quot;)</div><div class="line">	&#125;</div><div class="line">	function show(event)&#123;</div><div class="line">		alert(event.target);</div><div class="line">			&#125;</div><div class="line">	//给div和input添加点击事件</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);</div><div class="line">	div1.addEventListener(&quot;click&quot;,show2,false);</div><div class="line">	//输出结果是当点击按钮时他会首先弹出event.target的内容，然后在弹出div1</div></pre></td></tr></table></figure>
@@ -145,7 +148,10 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;事件对象（运用事件处理中的函数）&quot;&gt;&lt;a href=&quot;#事件对象（运用事件处理中的函数）&quot; class=&quot;headerlink&quot; title=&quot;事件对象（运用事件处理中的函数）&quot;&gt;&lt;/a&gt;事件对象（运用事件处理中的函数）&lt;/h1&gt;&lt;h5 id=&quot;1-DOM中的对象
+      &lt;h1 id=&quot;事件对象（运用事件处理中的函数）&quot;&gt;&lt;a href=&quot;#事件对象（运用事件处理中的函数）&quot; class=&quot;headerlink&quot; title=&quot;事件对象（运用事件处理中的函数）&quot;&gt;&lt;/a&gt;事件对象（运用事件处理中的函数）&lt;/h1&gt;&lt;h5 id=&quot;1-DOM中的对象&quot;&gt;&lt;a href=&quot;#1-DOM中的对象&quot; class=&quot;headerlink&quot; title=&quot;1.DOM中的对象&quot;&gt;&lt;/a&gt;1.DOM中的对象&lt;/h5&gt;&lt;ol&gt;
+&lt;li&gt;type属性，用于获取事件类型&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;anniu&amp;quot; id=&amp;quot;btn&amp;quot;&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	var btn = document.getElementById(&amp;quot;btn&amp;quot;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			function show(event)&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;				alert(event.type);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;			&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	btn.addEventListener(&amp;quot;click&amp;quot;,show,false);//弹出结果为click&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -159,10 +165,11 @@
     <link href="http://yoursite.com/2017/04/02/%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/02/轮播图的原理/</id>
     <published>2017-04-02T12:43:01.469Z</published>
-    <updated>2018-03-15T15:59:55.440Z</updated>
+    <updated>2018-03-15T16:13:37.555Z</updated>
     
     <content type="html"><![CDATA[<h1 id="轮播图的原理"><a href="#轮播图的原理" class="headerlink" title="轮播图的原理"></a>轮播图的原理</h1><p>一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播<br><img src="http://ootf4jurd.bkt.clouddn.com/%E8%BD%AE%E6%92%AD.png" alt="image"></p>
-<p>&lt; !–more–&gt;<br>html代码</p>
+<a id="more"></a>
+<p>html代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;container&quot;&gt;</div><div class="line">&lt;div id=&quot;list&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;a id=&quot;btnleft&gt;&lt;img src=&quot;左.png&quot; class=&quot;left&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a id=&quot;btnright&quot;&gt;&lt;img src=&quot;右.jpg&quot; class=&quot;right&quot;&gt;&lt;/a&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div id=&quot;buttons&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>CSS部分</p>
 <p><strong>注意list的overflow:hidden;只显示窗口的一张图片，把左右两边的都隐藏起来。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    padding: 20px;</div><div class="line">        &#125;</div><div class="line">#container&#123;</div><div class="line">	width: 800px;</div><div class="line">	margin: 0 auto;</div><div class="line">	position: relative;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">#list&#123;</div><div class="line">	width: 4800px;</div><div class="line">	height: 300px;</div><div class="line">	position: absolute;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#list img&#123;</div><div class="line">	width: 800px;</div><div class="line">	height: 300px;</div><div class="line">	float: left;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.right&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	margin-left: 750px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line">.button&#123;</div><div class="line">	width: 120px;</div><div class="line">	height: 80px;</div><div class="line">	margin-top: 450px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.left:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div><div class="line">.right:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -180,7 +187,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;轮播图的原理&quot;&gt;&lt;a href=&quot;#轮播图的原理&quot; class=&quot;headerlink&quot; title=&quot;轮播图的原理&quot;&gt;&lt;/a&gt;轮播图的原理&lt;/h1&gt;&lt;p&gt;一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图
+      &lt;h1 id=&quot;轮播图的原理&quot;&gt;&lt;a href=&quot;#轮播图的原理&quot; class=&quot;headerlink&quot; title=&quot;轮播图的原理&quot;&gt;&lt;/a&gt;轮播图的原理&lt;/h1&gt;&lt;p&gt;一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播&lt;br&gt;&lt;img src=&quot;http://ootf4jurd.bkt.clouddn.com/%E8%BD%AE%E6%92%AD.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -223,14 +230,16 @@
     <link href="http://yoursite.com/2017/04/02/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://yoursite.com/2017/04/02/正则表达式/</id>
     <published>2017-04-02T12:31:23.138Z</published>
-    <updated>2018-03-15T16:00:46.253Z</updated>
+    <updated>2018-03-15T16:14:20.943Z</updated>
     
     <content type="html"><![CDATA[<p>创建一个RegExp的两种方法</p>
 <ol>
 <li>隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]</li>
 <li>显示创建 var reg = new RegExp(“正则表达式”,”gi”)<br>元字符</li>
 <li>{n}，用于指定前面的字符和组合连续出现多少次<br>例如：a{3},(\d){2}        注意1{3}去匹配1111111，结果是111， 111，它先匹配前三个1然后第二次匹配是在剩下的4个1中匹配</li>
-<li>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111<br>&lt; !–more–&gt;</li>
+<li><p>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111</p>
+<a id="more"></a>
+</li>
 <li><ul>
 <li>表示匹配出现1次到任意多次</li>
 </ul>
@@ -260,7 +269,9 @@
       &lt;p&gt;创建一个RegExp的两种方法&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]&lt;/li&gt;
-&lt;li&gt;显示创建 var reg = new RegExp(“正则表达式”,”gi”)&lt;br&gt;元字符&lt;/l
+&lt;li&gt;显示创建 var reg = new RegExp(“正则表达式”,”gi”)&lt;br&gt;元字符&lt;/li&gt;
+&lt;li&gt;{n}，用于指定前面的字符和组合连续出现多少次&lt;br&gt;例如：a{3},(\d){2}        注意1{3}去匹配1111111，结果是111， 111，它先匹配前三个1然后第二次匹配是在剩下的4个1中匹配&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;{n,m}表示最少匹配n次，最多匹配m次&lt;br&gt;例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111&lt;br&gt;JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
@@ -272,13 +283,14 @@
     <link href="http://yoursite.com/2017/04/02/%E6%95%B0%E7%BB%84/"/>
     <id>http://yoursite.com/2017/04/02/数组/</id>
     <published>2017-04-02T12:31:23.137Z</published>
-    <updated>2018-03-15T16:00:24.745Z</updated>
+    <updated>2018-03-15T16:14:05.837Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
 <li>数组的创建</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//法一</div><div class="line">var colors = new Array();</div><div class="line">var colors = new Array(20);//括号中可以填数组要保存的项目数量，这就是创建了length为20的数组</div><div class="line">var colors = new Array(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;);//括号也可以传递数组中应该包含的项</div><div class="line">//法二数组字面量表示法</div><div class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</div></pre></td></tr></table></figure>
-<p>&lt; !–more–&gt;<br>2.元素的访问与修改</p>
+<a id="more"></a>
+<p>2.元素的访问与修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];</div><div class="line">alert(colors[0]);//访问到了red，数组的访问是以0开始的</div><div class="line">colors[2] = &quot;black&quot;;//将第三项blue修改为了black</div><div class="line">colors[3] = &quot;yellow&quot;;//新增了第四项</div></pre></td></tr></table></figure>
 <p>3.数组的转换方法</p>
 <ul>
@@ -311,7 +323,7 @@
       &lt;h1 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;数组的创建&lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td 
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//法一&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var colors = new Array();&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var colors = new Array(20);//括号中可以填数组要保存的项目数量，这就是创建了length为20的数组&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var colors = new Array(&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;green&amp;quot;);//括号也可以传递数组中应该包含的项&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//法二数组字面量表示法&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;var colors = [&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;green&amp;quot;];&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

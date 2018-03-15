@@ -96,7 +96,7 @@
 <meta property="og:site_name" content="Welcome to my blog">
 <meta property="og:description" content="事件处理程序1. HTML事件处理程序123456HTML中的代码&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;按钮&amp;quot; onclick=&amp;quot;showmes()&amp;quot;&amp;gt;javascript代码function showmes()&amp;#123;    alert(&amp;quot;123&amp;quot;);&amp;#125;
 缺点是：这个改函数">
-<meta property="og:updated_time" content="2018-03-15T16:00:03.795Z">
+<meta property="og:updated_time" content="2018-03-15T16:13:44.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="事件处理程序">
 <meta name="twitter:description" content="事件处理程序1. HTML事件处理程序123456HTML中的代码&amp;lt;input type=&amp;quot;button&amp;quot; value=&amp;quot;按钮&amp;quot; onclick=&amp;quot;showmes()&amp;quot;&amp;gt;javascript代码function showmes()&amp;#123;    alert(&amp;quot;123&amp;quot;);&amp;#125;
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  632
+                  631
                 </span>
               
 
@@ -419,7 +419,7 @@
 
       
         <h1 id="事件处理程序"><a href="#事件处理程序" class="headerlink" title="事件处理程序"></a>事件处理程序</h1><h5 id="1-HTML事件处理程序"><a href="#1-HTML事件处理程序" class="headerlink" title="1. HTML事件处理程序"></a>1. HTML事件处理程序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; onclick=&quot;showmes()&quot;&gt;</div><div class="line">javascript代码</div><div class="line">function showmes()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。<br>&lt; !–more–&gt;</p>
+<p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。<br><a id="more"></a></p>
 <h5 id="2-dom0级"><a href="#2-dom0级" class="headerlink" title="2.dom0级"></a>2.dom0级</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; id=&quot;btn&gt;</div><div class="line">javascript代码</div><div class="line">var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">btn.onclick = function()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>缺点：不能同时绑定多个相同的事件，不然这个事件就会被覆盖，直接执行最后一个事件<br>优点：可以绑定多个不同的事件，可以兼容浏览器</p>
 <h5 id="3-dom2级"><a href="#3-dom2级" class="headerlink" title="3.dom2级"></a>3.dom2级</h5><p>chorme,firefox浏览器中</p>
