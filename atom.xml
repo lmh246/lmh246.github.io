@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-24T09:15:11.287Z</updated>
+  <updated>2018-03-15T15:59:42.071Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,11 @@
     <title>bootstrap基础一</title>
     <link href="http://yoursite.com/2017/04/22/%E5%9F%BA%E7%A1%80%E4%B8%80/"/>
     <id>http://yoursite.com/2017/04/22/基础一/</id>
-    <published>2017-04-22T14:36:00.495Z</published>
-    <updated>2017-10-24T09:15:11.287Z</updated>
+    <published>2017-04-22T14:36:00.496Z</published>
+    <updated>2018-03-15T15:59:42.071Z</updated>
     
     <content type="html"><![CDATA[<h1 id="文本对齐"><a href="#文本对齐" class="headerlink" title="文本对齐"></a>文本对齐</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">text-left居左对齐</div><div class="line">text-center居中对齐</div><div class="line">text-right居右对齐</div><div class="line">text-justify两端对齐</div></pre></td></tr></table></figure>
+<p>&lt; !–more–&gt;</p>
 <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">list-unstyled去点列表（去编号）</div><div class="line">list-inline内联列表，即把垂直列表换成水平列表，而且去掉项目符号（编号），保持水平显示。</div></pre></td></tr></table></figure>
 <p>==<ul class="list-unstyled"></ul>==</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;code&gt;&lt;/code&gt;来显示单行内联代码</div><div class="line">&lt;pre&gt;&lt;/pre&gt;来显示多行块代码</div><div class="line">&lt;kbd&gt;&lt;/kbd&gt;来显示用户输入代码</div><div class="line">pre-scrollable 控制&lt;pre&gt;&lt;/pre&gt;中代码块区域最大高度为340px，一旦超出这个高度，就会在Y轴出现滚动条</div><div class="line">&lt;kbd class=&quot;pre-scrollable&quot;&gt;&lt;/kbd&gt;</div></pre></td></tr></table></figure>
@@ -57,11 +58,11 @@
     <title>bootstrap网格</title>
     <link href="http://yoursite.com/2017/04/22/%E7%BD%91%E6%A0%BC/"/>
     <id>http://yoursite.com/2017/04/22/网格/</id>
-    <published>2017-04-22T14:35:47.827Z</published>
-    <updated>2017-10-24T09:16:01.738Z</updated>
+    <published>2017-04-22T14:35:47.828Z</published>
+    <updated>2018-03-15T16:00:32.065Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一-用法"><a href="#一-用法" class="headerlink" title="一.用法"></a>一.用法</h1><h2 id="1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding"><a href="#1-数据行-row-必须包含在容器（-container）中，以便为其赋予合适的对齐方式和内距-padding" class="headerlink" title="1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)"></a>1. 数据行(.row)必须包含在容器（.container）中，以便为其赋予合适的对齐方式和内距(padding)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">    &lt;div class=&quot;row&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p><img src="http://ootf4jurd.bkt.clouddn.com/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80.jpg" alt="image"></p>
+<p><img src="http://ootf4jurd.bkt.clouddn.com/%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80.jpg" alt="image"><br>&lt; !–more–&gt;</p>
 <ul>
 <li>标号为2的那一行，每一列拥有左边距（padding-left）与右边距(padding-right)，并且都为15px，所以整体那一个布局就有15px与15px的左右边距。</li>
 <li>如果放在类名为row的div中，那么那个类名会自动添加margin-left与margin-right属性，来抵消整体的左右内边距<h2 id="2、在行-row-中可以添加列-column-，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）"><a href="#2、在行-row-中可以添加列-column-，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）" class="headerlink" title="2、在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）"></a>2、在行(.row)中可以添加列(.column)，但列数之和不能超过平分的总列数（一般在bootstrap中为12列）</h2><h3 id="常用类型"><a href="#常用类型" class="headerlink" title="常用类型"></a>常用类型</h3><h4 id="4-8型"><a href="#4-8型" class="headerlink" title="4,8型"></a>4,8型</h4></li>
@@ -92,11 +93,11 @@
     <title>事件处理程序</title>
     <link href="http://yoursite.com/2017/04/08/%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/08/事件处理/</id>
-    <published>2017-04-08T15:16:51.148Z</published>
-    <updated>2017-10-24T09:14:39.038Z</updated>
+    <published>2017-04-08T15:16:51.149Z</published>
+    <updated>2018-03-15T16:00:03.795Z</updated>
     
     <content type="html"><![CDATA[<h1 id="事件处理程序"><a href="#事件处理程序" class="headerlink" title="事件处理程序"></a>事件处理程序</h1><h5 id="1-HTML事件处理程序"><a href="#1-HTML事件处理程序" class="headerlink" title="1. HTML事件处理程序"></a>1. HTML事件处理程序</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; onclick=&quot;showmes()&quot;&gt;</div><div class="line">javascript代码</div><div class="line">function showmes()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。</p>
+<p>缺点是：这个改函数不方便，改一个函数不仅要在HTML代码中改变，还需要在JavaScript代码中修改，这造成了一种生活负担。<br>&lt; !–more–&gt;</p>
 <h5 id="2-dom0级"><a href="#2-dom0级" class="headerlink" title="2.dom0级"></a>2.dom0级</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">HTML中的代码</div><div class="line">&lt;input type=&quot;button&quot; value=&quot;按钮&quot; id=&quot;btn&gt;</div><div class="line">javascript代码</div><div class="line">var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">btn.onclick = function()&#123;</div><div class="line">    alert(&quot;123&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>缺点：不能同时绑定多个相同的事件，不然这个事件就会被覆盖，直接执行最后一个事件<br>优点：可以绑定多个不同的事件，可以兼容浏览器</p>
 <h5 id="3-dom2级"><a href="#3-dom2级" class="headerlink" title="3.dom2级"></a>3.dom2级</h5><p>chorme,firefox浏览器中</p>
@@ -122,14 +123,14 @@
     <title>事件对象（运用事件处理中的函数）</title>
     <link href="http://yoursite.com/2017/04/08/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/04/08/事件对象/</id>
-    <published>2017-04-08T15:16:40.455Z</published>
-    <updated>2017-10-24T09:14:34.267Z</updated>
+    <published>2017-04-08T15:16:40.456Z</published>
+    <updated>2018-03-15T16:00:15.526Z</updated>
     
     <content type="html"><![CDATA[<h1 id="事件对象（运用事件处理中的函数）"><a href="#事件对象（运用事件处理中的函数）" class="headerlink" title="事件对象（运用事件处理中的函数）"></a>事件对象（运用事件处理中的函数）</h1><h5 id="1-DOM中的对象"><a href="#1-DOM中的对象" class="headerlink" title="1.DOM中的对象"></a>1.DOM中的对象</h5><ol>
 <li>type属性，用于获取事件类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">			function show(event)&#123;</div><div class="line">				alert(event.type);</div><div class="line">			&#125;</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);//弹出结果为click</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>2.target属性，用于获取事件目标</p>
+<p>&lt; !–more–&gt;<br>2.target属性，用于获取事件目标</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">			function show(event)&#123;</div><div class="line">				alert(event.target);</div><div class="line">			&#125;</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);//弹出结果为objext htmlinputelement</div></pre></td></tr></table></figure>
 <p>3.事件冒泡，从最和内层的元素逐渐到它最外层的父元素</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;div1&quot;&gt;</div><div class="line">	&lt;input type=&quot;button&quot; value=&quot;anniu&quot; id=&quot;btn&quot;&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">	var btn = document.getElementById(&quot;btn&quot;);</div><div class="line">	var div1 = document.getElementById(&quot;div1&quot;);</div><div class="line">	function show2()&#123;</div><div class="line">		alert(&quot;div1&quot;)</div><div class="line">	&#125;</div><div class="line">	function show(event)&#123;</div><div class="line">		alert(event.target);</div><div class="line">			&#125;</div><div class="line">	//给div和input添加点击事件</div><div class="line">	btn.addEventListener(&quot;click&quot;,show,false);</div><div class="line">	div1.addEventListener(&quot;click&quot;,show2,false);</div><div class="line">	//输出结果是当点击按钮时他会首先弹出event.target的内容，然后在弹出div1</div></pre></td></tr></table></figure>
@@ -158,9 +159,10 @@
     <link href="http://yoursite.com/2017/04/02/%E8%BD%AE%E6%92%AD%E5%9B%BE%E7%9A%84%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2017/04/02/轮播图的原理/</id>
     <published>2017-04-02T12:43:01.469Z</published>
-    <updated>2017-10-24T09:14:55.071Z</updated>
+    <updated>2018-03-15T15:59:55.440Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="轮播图的原理"><a href="#轮播图的原理" class="headerlink" title="轮播图的原理"></a>轮播图的原理</h1><p>一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播<br><img src="http://ootf4jurd.bkt.clouddn.com/%E8%BD%AE%E6%92%AD.png" alt="image"><br>html代码</p>
+    <content type="html"><![CDATA[<h1 id="轮播图的原理"><a href="#轮播图的原理" class="headerlink" title="轮播图的原理"></a>轮播图的原理</h1><p>一系列大小相等的图片平铺，利用CSS布局只显示一张图片，其余的图片隐藏。就是相当于中间有一个div，大小是图片的大小，然后外面有个大的div，包含了所有图片。通过计算偏移量来进行轮播<br><img src="http://ootf4jurd.bkt.clouddn.com/%E8%BD%AE%E6%92%AD.png" alt="image"></p>
+<p>&lt; !–more–&gt;<br>html代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;container&quot;&gt;</div><div class="line">&lt;div id=&quot;list&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;a id=&quot;btnleft&gt;&lt;img src=&quot;左.png&quot; class=&quot;left&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a id=&quot;btnright&quot;&gt;&lt;img src=&quot;右.jpg&quot; class=&quot;right&quot;&gt;&lt;/a&gt;</div><div class="line"></div><div class="line"></div><div class="line">&lt;div id=&quot;buttons&quot;&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;1.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;2.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;3.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;4.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;5.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;a&gt;&lt;img src=&quot;6.jpg&quot; class=&quot;button&quot;&gt;&lt;/a&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
 <p>CSS部分</p>
 <p><strong>注意list的overflow:hidden;只显示窗口的一张图片，把左右两边的都隐藏起来。</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">    padding: 20px;</div><div class="line">        &#125;</div><div class="line">#container&#123;</div><div class="line">	width: 800px;</div><div class="line">	margin: 0 auto;</div><div class="line">	position: relative;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">#list&#123;</div><div class="line">	width: 4800px;</div><div class="line">	height: 300px;</div><div class="line">	position: absolute;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#list img&#123;</div><div class="line">	width: 800px;</div><div class="line">	height: 300px;</div><div class="line">	float: left;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.right&#123;</div><div class="line">	position: absolute;</div><div class="line">	margin-top: 150px;</div><div class="line">	margin-left: 750px;</div><div class="line">	width: 50px;</div><div class="line">	height: 50px;</div><div class="line">	opacity:0.5;</div><div class="line">&#125;</div><div class="line">.button&#123;</div><div class="line">	width: 120px;</div><div class="line">	height: 80px;</div><div class="line">	margin-top: 450px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.left:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div><div class="line">.right:hover&#123;</div><div class="line">	opacity:1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -191,11 +193,10 @@
     <title>javascript基本知识</title>
     <link href="http://yoursite.com/2017/04/02/%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86/"/>
     <id>http://yoursite.com/2017/04/02/基本知识/</id>
-    <published>2017-04-02T12:31:23.139Z</published>
-    <updated>2017-10-24T09:15:28.873Z</updated>
+    <published>2017-04-02T12:31:23.140Z</published>
+    <updated>2018-03-15T15:59:31.836Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p>1.最好的做法把<script>标签放到html文档的最后，</script>标签之前，这样能使浏览器更快的加载页面</p>
-<p>2.JavaScript中，变量和其他语法元素都是区分字母大小写的</p>
+    <content type="html"><![CDATA[<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p>1.最好的做法把<script>标签放到html文档的最后，</script>标签之前，这样能使浏览器更快的加载页面<br>&lt; !–more–&gt;<br>2.JavaScript中，变量和其他语法元素都是区分字母大小写的</p>
 <p>3.不允许变量名中包含空格和标点符号（$除外），允许包含字母，数字，美元符号，下划线，但是第一个字符不允许是数字</p>
 <p>4.对象</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">//创建方法</div><div class="line">1.直接创建</div><div class="line">var lennon = Object();</div><div class="line">lennon.name = &quot;john&quot;;</div><div class="line">lennon.year = 25;</div><div class="line">lennon.living = false;</div><div class="line">2.简洁的方法</div><div class="line">var lennon = &#123;</div><div class="line">    name:&quot;john&quot;,</div><div class="line">    year:25,</div><div class="line">    living:false</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -208,7 +209,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;基本知识&quot;&gt;&lt;a href=&quot;#基本知识&quot; class=&quot;headerlink&quot; title=&quot;基本知识&quot;&gt;&lt;/a&gt;基本知识&lt;/h1&gt;&lt;p&gt;1.最好的做法把&lt;script&gt;标签放到html文档的最后，&lt;/script&gt;标签之前，这样能使浏览器更快的加载页面&lt;/p&gt;
+      &lt;h1 id=&quot;基本知识&quot;&gt;&lt;a href=&quot;#基本知识&quot; class=&quot;headerlink&quot; title=&quot;基本知识&quot;&gt;&lt;/a&gt;基本知识&lt;/h1&gt;&lt;p&gt;1.最好的做法把&lt;script&gt;标签放到html文档的最后，&lt;/script&gt;标签之前，这样能使浏览器更快的加载页面&lt;br&gt;
     
     </summary>
     
@@ -222,14 +223,14 @@
     <link href="http://yoursite.com/2017/04/02/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://yoursite.com/2017/04/02/正则表达式/</id>
     <published>2017-04-02T12:31:23.138Z</published>
-    <updated>2017-04-02T12:33:09.205Z</updated>
+    <updated>2018-03-15T16:00:46.253Z</updated>
     
     <content type="html"><![CDATA[<p>创建一个RegExp的两种方法</p>
 <ol>
 <li>隐式创建  var reg=/正则表达式/gi  [g表示全局匹配，i表示区别大小写,m考虑换行]</li>
 <li>显示创建 var reg = new RegExp(“正则表达式”,”gi”)<br>元字符</li>
 <li>{n}，用于指定前面的字符和组合连续出现多少次<br>例如：a{3},(\d){2}        注意1{3}去匹配1111111，结果是111， 111，它先匹配前三个1然后第二次匹配是在剩下的4个1中匹配</li>
-<li>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111</li>
+<li>{n,m}表示最少匹配n次，最多匹配m次<br>例如3{2，3}   注意1{3，4}匹配111111，结果是1111，111<br>JavaScript中遵循贪婪原则，优先匹配字符多的，因此它首先匹配了1111 ，剩下三个1，组不成4个1 ，因此又匹配出了111<br>&lt; !–more–&gt;</li>
 <li><ul>
 <li>表示匹配出现1次到任意多次</li>
 </ul>
@@ -270,14 +271,14 @@
     <title>数组</title>
     <link href="http://yoursite.com/2017/04/02/%E6%95%B0%E7%BB%84/"/>
     <id>http://yoursite.com/2017/04/02/数组/</id>
-    <published>2017-04-02T12:31:23.136Z</published>
-    <updated>2017-10-24T09:13:07.996Z</updated>
+    <published>2017-04-02T12:31:23.137Z</published>
+    <updated>2018-03-15T16:00:24.745Z</updated>
     
     <content type="html"><![CDATA[<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><ol>
 <li>数组的创建</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//法一</div><div class="line">var colors = new Array();</div><div class="line">var colors = new Array(20);//括号中可以填数组要保存的项目数量，这就是创建了length为20的数组</div><div class="line">var colors = new Array(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;);//括号也可以传递数组中应该包含的项</div><div class="line">//法二数组字面量表示法</div><div class="line">var colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];</div></pre></td></tr></table></figure>
-<p>2.元素的访问与修改</p>
+<p>&lt; !–more–&gt;<br>2.元素的访问与修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];</div><div class="line">alert(colors[0]);//访问到了red，数组的访问是以0开始的</div><div class="line">colors[2] = &quot;black&quot;;//将第三项blue修改为了black</div><div class="line">colors[3] = &quot;yellow&quot;;//新增了第四项</div></pre></td></tr></table></figure>
 <p>3.数组的转换方法</p>
 <ul>
@@ -324,10 +325,9 @@
     <link href="http://yoursite.com/2017/04/02/%E5%85%B3%E4%BA%8E%E5%BC%B9%E5%87%BA%E5%B1%82%E7%9A%84%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/04/02/关于弹出层的总结/</id>
     <published>2017-04-02T12:18:49.000Z</published>
-    <updated>2017-10-24T09:15:45.177Z</updated>
+    <updated>2018-03-15T15:59:20.069Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="关于弹出层的总结"><a href="#关于弹出层的总结" class="headerlink" title="关于弹出层的总结"></a>关于弹出层的总结</h1><p>思路：<br>现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的</p>
-<p>HTML</p>
+    <content type="html"><![CDATA[<h1 id="关于弹出层的总结"><a href="#关于弹出层的总结" class="headerlink" title="关于弹出层的总结"></a>关于弹出层的总结</h1><p>思路：<br>现在HTML文件中写出登录框，然后为他设置样式，然后就是将代码注释，这是需要在JS文件中点击登录需要创建的<br>&lt; !–more–&gt;<br>HTML</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">&lt;button id=&quot;btnlogin&quot;&gt;登录&lt;/button&gt;</div><div class="line">&lt;!--&lt;div id=&quot;mask&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;div id=&quot;login&quot;&gt;</div><div class="line">	&lt;div class=&quot;head&quot;&gt;</div><div class="line">		登录账号</div><div class="line">		&lt;div id=&quot;close&quot;&gt;×&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">	&lt;div class=&quot;contain&quot;&gt;</div><div class="line">		&lt;div class=&quot;user&quot;&gt;</div><div class="line">			用户名：&lt;span&gt;&lt;input type=&quot;text&quot; placeholder=&quot;用户名/手机/邮箱&quot;&gt;&lt;/span&gt;</div><div class="line">		&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;password&quot;&gt;密码： &amp;nbsp; &amp;nbsp;&lt;input type=&quot;password&quot;&gt;&lt;/div&gt;</div><div class="line">		&lt;div class=&quot;submit&quot;&gt; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;input type=&quot;submit&quot; value=&quot;登录&quot;&gt;&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">--&gt;</div></pre></td></tr></table></figure>
 <p>CSS</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">#btnlogin&#123;</div><div class="line">	position: absolute;</div><div class="line">	right: 10px;</div><div class="line">	top: 10px;</div><div class="line">&#125;</div><div class="line">#mask&#123;</div><div class="line">	background-color: black;</div><div class="line">	opacity: 0.5;//设置透明度</div><div class="line">	width: 100%;</div><div class="line">	z-index: 1000;//设置优先级</div><div class="line">&#125;</div><div class="line">#login&#123;</div><div class="line">	position: fixed;</div><div class="line">	left: 30%;</div><div class="line">	top: 30%;</div><div class="line">	border: 1px solid black;</div><div class="line">	z-index: 1001;</div><div class="line">&#125;</div><div class="line">.head&#123;</div><div class="line">	width: 400px;</div><div class="line">	height: 40px;</div><div class="line">	background-color: #666666;</div><div class="line">	position: relative;</div><div class="line">	text-align: left;</div><div class="line">	line-height: 40px;</div><div class="line">	font-size: 20px;</div><div class="line">	cursor: move;//鼠标放在登录框顶部会变成十字按钮</div><div class="line">&#125;</div><div class="line">.contain&#123;</div><div class="line">	width: 400px;</div><div class="line">	height: 250px;</div><div class="line">	position: relative;</div><div class="line">	background-color: white;</div><div class="line"></div><div class="line">&#125;</div><div class="line">#close&#123;</div><div class="line">	width: 30px;</div><div class="line">	height: 30px;</div><div class="line">	cursor: pointer;</div><div class="line">	position: absolute;</div><div class="line">	right: 5px;</div><div class="line">	top: 5px;</div><div class="line">	text-align: center;</div><div class="line">	line-height: 30px;</div><div class="line">	font-size: 25px;</div><div class="line">&#125;</div><div class="line">.user, .password, .submit&#123;</div><div class="line">	padding-top: 25px;</div><div class="line">	margin-left: 25px;</div><div class="line">	width: 350px;</div><div class="line">	height: 50px;</div><div class="line">&#125;</div><div class="line">.contain input&#123;</div><div class="line">	width: 200px;</div><div class="line">	height: 40px;</div><div class="line">	border: 1px solid black;</div><div class="line">&#125;</div><div class="line">.submit input&#123;</div><div class="line">	background-color: #3F89EC;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
